@@ -1,0 +1,578 @@
+%% This is annot.tex.
+%% 
+%% You'll need to change the title and author fields to reflect your
+%% information.
+%%
+%% Author: Titus Barik (christopher.freire@westpoint.edu)
+%% Homepage: http://www.barik.net/sw/ieee/
+%% Reference: http://www.ctan.org/tex-archive/info/simplified-latex/
+
+\documentclass [11pt]{article}
+%\documentclass{article}
+\usepackage{url}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single,
+    keepspaces=true
+}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage{blindtext}
+%\usepackage{titlesec}
+
+
+
+%\lhead{\includegraphics[width=0.2\textwidth]{nyush-logo.pdf}}
+\fancypagestyle{firstpage}{%
+  \lhead{USMA}
+  \rhead{
+  CY383 Project Report}
+}
+
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Kewywords---}} #1
+}
+
+%%%% PROJECT TITLE
+%% --Change the text between the brackets to update the Project Title.--
+\title{West Point Mobile Application Tracker}
+
+%%%% AUTHORS
+%% --Update the information for the first author (email, name, and Cadet ID).--
+\author{\href{mailto:christopher.freire@westpoint.edu}{Christopher Freire} (C27446002)\\ \href{mailto:tayshaun.peterson@westpoint.edu}{Tayshaun Peterson} (C53209226)\\ \href{mailto:hunter.mamawal@westpoint.edu}{Hunter Mamawal} (C26891966)}
+
+\begin{document}
+
+%% The titlepage section creates a standard coverpage. 
+%% Update your instructor, name, and date.
+%% You must still follow the signature requires as described in Canvas.
+
+\begin{titlepage}
+\begin{centering}
+
+UNITED STATES MILITARY ACADEMY\vspace{4em}
+
+P03 - INTERFACE DESIGN\vspace{4em}
+
+CY383: Secure Interface Design \vspace{4em}
+
+SECTION G2\vspace{1em}
+
+LTC JESSE WOOD\vspace{4em}
+
+BY\vspace{1em}
+
+CADET CHRISTOPHER FREIRE `25, CO A3\vspace{1em}
+
+CADET TAYSHAUN PETERSON `25, CO C3\vspace{1em}
+
+CADET HUNTER MAMAWAL `25, CO C3\vspace{1em}
+
+WEST POINT, NEW YORK\vspace{1em}
+
+
+13 MARCH 2025\vspace{4em}
+
+\end{centering}
+
+\noindent
+\textunderscore CF\textunderscore TP\textunderscore HM\textunderscore \textunderscore \textunderscore I CERTIFY THAT I HAVE COMPLETELY DOCUMENTED ALL SOURCES THAT I USED TO COMPLETE THIS ASSIGNMENT AND THAT I ACKNOWLEDGED ALL ASSISTANCE I
+RECEIVED IN THE COMPLETION OF THIS ASSIGNMENT. \vspace{2em}
+
+\noindent
+\textunderscore\textunderscore\textunderscore \textunderscore \textunderscore \textunderscore I CERTIFY THAT I DID NOT USE ANY SOURCES OR RECEIVE ANY ASSISTANCE REQUIRING DOCUMENTATION WHILE COMPLETING THIS ASSIGNMENT. \vspace{2em}
+
+\noindent
+SIGNATURE: \textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore \textunderscore \textunderscore \textunderscore\textunderscore  
+\end{titlepage}
+
+
+\maketitle
+\tableofcontents
+\newpage
+\thispagestyle{firstpage}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+  This project is a mobile application for West Point that makes the current Excel-based “Master Tracker” system more efficient and accessible. The application will streamline data entry, improve task management efficiency, and ensure timely compliance with administrative requirements. Through secure design principles, this app will enhance both usability and security while reducing overhead for executive officers (XOs). 
+\end{abstract}\hspace{10pt}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Master Tracker, Mobile Application, Task Management, Data Entry, Notifications. }
+
+\section{Motivation}
+At West Point, the Master Tracker system is an important tool used to manage administrative and operational tasks across platoons. Currently, this system is employed in an Excel format, which requires manual data entry and constant monitoring by executive officers (XOs). This process is time-consuming and inefficient. The proposed mobile application aims to simplify many of these tasks by offering a streamlined interface and personalized notifications. This will reduce administrative burdens, allowing cadets to focus on their school, people, and athletic responsibilities. 
+
+\section{Related Work}
+ \textbf{Excel}: The current Master Tracker system at West Point relies heavily on Excel for task management and data entry. While Excel provides a flexible platform for organizing information, it requires manual updates and constant oversight. This manual process increases the likelihood of delays in task completion and administrative inefficiencies. Furthermore, Excel lacks the capability to automate notifications or enforce compliance, placing additional burdens on executive officers.
+ \textbf{GroupMe}: The current notification system for alerting cadets about new items to be filled out runs on the GroupMe application. It is a very manual process in which the messages are manually sent in specific group chats. Further, so much non-essential communication occurs through GroupMe that the important items are crowded out. 
+
+\section{Interface Requirements}
+\subsection{Actors:}
+\begin{enumerate}
+    \item Cadets: Users responsible for entering their personal and administrative data into the system. 
+    \item Cadet Executive Officers (XOs): Administrators who oversee the completeness and accuracy of entries, receive notifications of missing data, and manage compliance. 
+    \item Gold Coats System Administrators: Responsible for maintaining the application’s security, user access control, and automation settings. 
+\end{enumerate}
+\subsection{Use Cases: }
+% 1. Data Entry by Cadets Use Case Table
+\subsubsection*{Data Entry by Cadets}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Use Case Name} & Data Entry by Cadets \\
+\hline
+\textbf{Primary Actor} & Cadet \\
+\hline
+\textbf{Secondary Actors} & Cadet XO, System Administrator \\
+\hline
+\textbf{Preconditions} & Cadet is logged in and authenticated; user is on the dashboard/home page \\
+\hline
+\textbf{Flow of Events} & 
+1. Cadet logs into the app\newline
+2. Task list is shown sorted by due date\newline
+3. Cadet selects and completes task\newline
+4. Data is validated and saved\newline
+5. Confirmation is shown; XO dashboard updates \\
+\hline
+\textbf{Postconditions} & Cadet sees confirmation that entries are completed successfully. \\
+\hline
+\textbf{Nonfunctional Requirements} & 
+\begin{itemize}
+  \item Data must be validated before submission
+  \item Most urgent task appears at top of list
+\end{itemize} \\
+\hline
+\end{tabular}
+\caption{Data Entry by Cadets}
+\end{table}
+
+% 2. Automated Notifications Use Case Table
+\subsubsection*{Automated Notifications}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Use Case Name} & Automated Notifications \\
+\hline
+\textbf{Primary Actor} & Cadet \\
+\hline
+\textbf{Secondary Actors} & Cadet XO, System Administrator \\
+\hline
+\textbf{Preconditions} & There are outstanding tasks assigned to cadets \\
+\hline
+\textbf{Flow of Events} & 
+1. System tracks task deadlines\newline
+2. Sends 48-hour reminders to cadets\newline
+3. Sends 24-hour alerts to XO\newline
+4. After deadline, generates NCOR \\
+\hline
+\textbf{Postconditions} & Notifications are delivered; NCORs are generated and logged for unresponsive cadets \\
+\hline
+\textbf{Nonfunctional Requirements} & 
+\begin{itemize}
+  \item NCOR must be issued within 1 minute of deadline
+  \item All activity logged for potential board evidence
+\end{itemize} \\
+\hline
+\end{tabular}
+\caption{Automated Notifications}
+\end{table}
+
+% 3. XO Task Overview Use Case Table
+\subsubsection*{Cadet XO Task Overview}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Use Case Name} & Cadet XO Task Overview \\
+\hline
+\textbf{Primary Actor} & Cadet XO \\
+\hline
+\textbf{Secondary Actors} & System Administrator \\
+\hline
+\textbf{Preconditions} & XO is authenticated and logged in \\
+\hline
+\textbf{Flow of Events} & 
+1. XO logs in\newline
+2. XO adds/edits new task\newline
+3. Dashboard shows task compliance across platoons\newline
+4. XO views individual cadet status \\
+\hline
+\textbf{Postconditions} & New task created or compliance stats reviewed \\
+\hline
+\textbf{Nonfunctional Requirements} & 
+\begin{itemize}
+  \item Real-time dashboard updates (\textless 10 second delay)
+\end{itemize} \\
+\hline
+\end{tabular}
+\caption{Cadet XO Task Overview}
+\end{table}
+
+\section{Interface Design}
+The main screen of the application will display a list of pending tasks, with the most urgent ones prioritized at the top. Completed tasks will be marked and viewable for reference. Input fields will be simple text boxes pre-labeled with required information categories (e.g., “Phone Number,” “Room Number”). Navigation tabs will allow users to switch between personal tasks and a platoon-wide overview. 
+
+\subsection{The Notification System}The screen supporting “Notification system” will be Apple/Android notifications sent to the home/lock screen of the user's phone. When clicked, it will bring the user to the CDT or task that is not completed. It will be a short message to tell the user what they need to know (something is due soon or late) so they know to check the app for more specifics. We use check boxes or flags to denote the action that needs to or has been taken.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{notification_system_figma_cropped.png}
+    \caption{Notifications to Users' Phones}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Late_task_notification.png}
+    \caption{Notifications to XO's Phone}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection{The Data Entry Screen}
+The primary screen supporting the "Data Entry by Cadets" use case will generally appear as a simple list that displays pending tasks sorted by due dates. The user can scroll through tasks, look at their information, and enter data for each task to complete it. We will use red and yellow coloring to show when tasks are due a week and a day from now and pop-ups to tell users if their data was submitted or denied.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{data_entry_screen.png}
+    \caption{Data Entry Screen Listings}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection{XO's Dashboard}
+The dashboard screen for the "Cadet XO Task Overview" use case will prioritize clarity and efficiency to quickly tell the XO how close to completion each task is and who is/is not done with each task. The user can add, remove, and edit tasks. We will use various buttons to show the user that they have these options and things like red exclamation points and popups to tell the user that there are late tasks or whether their action was successful or not.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{XO_dashboard.png}
+    \caption{XO's Administrative Dashboard}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.15\linewidth]{Mobile wireframe.png}
+    \caption{Flowchart - Depiction of paths the user can take as they navigate from the home screen}
+    \label{fig:flowchart}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{cdt_data_entry_sequence_diagram.png}
+    \caption{Case 1 - Data Entry by Cadets Sequence Diagram\cite{seqdia}}
+    \label{fig:seq_dia1}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{xo_task_overview_sequence_diagram.png}
+    \caption{Case 3 - CDT XO Task Overview}
+    \label{fig:seq_dia2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Master_tracker_login.png}
+    \caption{Master Tracker Login Page}
+    \label{fig:enter-label}
+\end{figure}
+
+\section{Threat Modeling and Risk Assessment}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{1cm}|p{4cm}|p{5cm}|p{1.5cm}|p{4.5cm}|}
+\hline
+\textbf{ID} & \textbf{Threat Name} & \textbf{Description} & \textbf{Risk Category} & \textbf{Justification} \\
+\hline
+1 & Spoofing Identity & An attacker impersonates “something or someone else.” & High & Gives adversaries information on current unit operations and likely locations of soldiers to better time other attacks. \\
+\hline
+2 & Tampering & Threat action intending to maliciously change or modify persistent data, such as records in a database, and alteration of data in transit between two computers over an open network, such as the internet. & High & Affects operational integrity by giving leaders inaccurate information about their unit’s readiness. \\
+\hline
+3 & Elevation of Privilege & “Threat action intending to gain privileged access to resources in order to gain unauthorized access to information or to compromise a system.” & High & Gives adversaries a high-level view of unit operations and could cause great risk to operational security. \\
+\hline
+\end{tabular}
+\caption{Threats, Risk Categories, and Justifications}
+\end{table}
+
+Potential threats include unauthorized access to sensitive cadet information and data manipulation. The application will mitigate these risks through: 
+\begin{itemize}
+    \item Authentication and Authorization: Multi-factor authentication (MFA) and strict role-based access controls. 
+    \item Data Encryption: End-to-end encryption for all data transmissions and encrypted storage for sensitive information. 
+    \item Audit Logs: Logs of all data changes to detect unauthorized modifications. 
+\end{itemize}
+
+\section{Prototype}
+A clickable prototype will be developed using tools like Figma, showcasing key functionalities such as data entry, notification systems, and XO dashboards. The prototype will simulate the data flow and security mechanisms.
+
+\section{Interface Evaluation}
+\subsection{Usability}
+Develop and describe a heuristic evaluation meant to evaluate the usability of your application. Include at least five (5) heuristics that are most relevant to the application and a rating scheme for each of the heuristics.
+\subsection{Security}
+Apply automated compliance testing to your prototype and present the results. Discuss the effectiveness of the countermeasures you attempted to include in the prototype.
+
+\section{Threat Modeling and Risk Assessment}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4cm}|p{5.5cm}|p{6.5cm}|}
+\hline
+\textbf{Asset} & \textbf{Description} & \textbf{Associated Vulnerability} \\
+\hline
+Cadet and XO Credentials & The login credentials used to authenticate the cadet or XO & Improper authentication (CWE-287) – “The attacker can set the cookies independently so that the code does not check the username and password.” \\
+\hline
+Backend Database & This database is what stores the master tracker information and any other possible private data of either the cadets or the XO & Improper input validation on the login screen (CWE-20) – “An attacker could use malicious input to modify data or possibly alter control flow in unexpected ways, including arbitrary command execution.” \\
+\hline
+XO Administrative Dashboard & The interface used by XOs to manage tasks and monitor cadet compliance & Missing Authorization (CWE-862) – “The product does not perform an authorization check when an actor attempts to access a resource or perform an action.” \\
+\hline
+\end{tabular}
+\caption{Assets and Associated Vulnerabilities}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{0.6cm}|p{2cm}|p{4.5cm}|p{1.8cm}|p{2cm}|p{4.5cm}|}
+\hline
+\textbf{ID} & \textbf{Threat Name} & \textbf{Description} & \textbf{Risk Category} & \textbf{Mitigation Strategy} & \textbf{Countermeasure} \\
+\hline
+1 & Spoofing Identity & An attacker impersonates “something or someone else.” & Moderate & Mitigate & 
+\begin{itemize}
+    \item Appropriate authentication
+    \item Protect secret data
+    \item Don’t store secrets
+    \item Use access control capabilities
+\end{itemize} \\
+\hline
+2 & Tampering & Threat action intending to maliciously change or modify persistent data, such as records in a database, and alteration of data in transit between two computers over an open network, such as the internet. & Low & Mitigate & 
+\begin{itemize}
+    \item Appropriate authorization
+    \item Hashes
+    \item MACs
+    \item Digital Signatures
+    \item Tamper-resistant protocols
+    \item Use an input validation framework
+\end{itemize} \\
+\hline
+3 & Elevation of Privilege & “Threat action intending to gain privileged access to resources in order to gain unauthorized access to information or to compromise a system.” & Moderate & Eliminate & 
+\begin{itemize}
+    \item Run with least privilege
+    \item RBAC
+    \item Use an authentication framework
+\end{itemize} \\
+\hline
+\end{tabular}
+\caption{Threats, Risks, and Countermeasures}
+\end{table}
+
+
+
+\subsection{}
+
+\section{Future Work}
+Future iterations could integrate with existing West Point systems like CIS, add features like calendar synchronization, and expand functionality to include more administrative processes. Further, generative artificial intelligence could be introduced to interpret and flag potential compliance risks. 
+
+\section{Conclusion}
+This application aims to revolutionize the administrative workflow at West Point by make the Master Tracker system more efficient. Through secure and user-friendly design, it will reduce the workload on cadet executive officers and improve data accuracy, input timeliness, and compliance across the platoon.
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file. Update the file 'references.bib' with the appropriate references. As you cite a reference in the manuscript, the citation will appear under References.
+\bibliographystyle{./CS400_Professional_Considerations_Templates_AY252/bibtex/bst/IEEEannot}
+\bibliography{./CS400_Professional_Considerations_Templates_AY252/bibtex/bib/ProfessionalConsiderations}
+
+\break
+
+%% This is for Acknowledgement of Assistance. This page is required.
+%% Use the examples below and add as many as required.
+%% If you recieved no assistance add the statement, "I recieved no assistance on this assigment." in the place of the first item.
+
+
+\begin{titlepage}
+\begin{centering}
+\textbf{Acknowledgment of Assistance} \vspace{1em}
+
+\end{centering}
+
+\noindent
+Rhode, Brandon LT A-4 '24. Assistance given to author, written discussion. I remembered that LT Brandon Rhode, one of my friends who has graduated had made a mobile version of CIS in his free time. I asked him what he used and he said he used Figma, which gave me the idea to use it for our project in the future. West Point, NY. 10 Feb. 2025. \\
+
+\noindent
+“ChatGPT.” Chatgpt.com, 2025, chatgpt.com and https://chatgpt.com/share/67aac1ec-79f0-8003-a8b6-557a071213ef. Accessed 11 Feb. 2025. This chat was not able to be shared because it included an image to a master tracker excel example for chatgpt to have more context. See appendix A for the conversation. This chat heavily influenced the content of both the slides and the report, with many sentences copied and slightly modified as seen fit. In the second link that was shareable, I learned how to format an appendix page, as seen below.
+\vspace{1em}
+
+\noindent
+“ChatGPT.” Chatgpt.com, 2025, chatgpt.com and https://chatgpt.com/share/67f6bb69-35b8-8003-aa3f-7089784b2a53. Accessed 9 Apr. 2025. This chat turned the use case section into tables based on what we already had written down.
+\vspace{1em}
+
+\noindent
+“ChatGPT.” Chatgpt.com, 2025, chatgpt.com and https://chatgpt.com/share/67f7233a-6efc-8003-9e38-7e88da47077e. Accessed 9 Apr. 2025. This chat converted regular text tables from word into latex tables for us in the threat modeling section.
+\vspace{1em}
+
+\noindent
+ "LucidChart." Lucidchart.com, 2025, lucidchart.com and https://lucid.app/lucidchart/link\href{https://lucid.app/lucidchart/69841c6c-e4ca-4909-a5d4-1d47f180a333/edit?viewport_loc=291%2C-4585%2C4803%2C2818%2C0_0&invitationId=inv_ee422065-cb83-4ba4-b033-1e0144dca9b2}. Accessed 12 Mar. 2025. This chat was used to generate a design that filled in the blanks from our steaty state to our endstate. Lucid Chart Generated a flowchart that met amny of the objectives that were desired, and alterations were made to enhance the desired path that the user would take. Through this, I learned what a seemingly dsecent flowchart looks like, and further increased my understanding of how to effectively prompt engineer.    
+\vspace{1em}
+
+\end{titlepage}
+
+\appendix
+\section{ChatGPT Conversation}
+\begin{lstlisting}
+i am in a secure interface design class right now and i am designing an application that is pertinent to my life that doesn't exist yet. i have chosen an application now i have to further expand on it. Bear in mind that for the final project you will be designing and prototyping the application you select based on threat modeling and risk assessment. You will then evaluate the usability and security of the prototype. Thus, the idea you settle on for the project should be appropriately scoped so that it is feasible for you to complete within the semester. here's the description of my idea: <<<Application for West Point that incorporates the “Master Tracker” system we use into a mobile application on our phones that would allow for easy input and would provide you with only the data that is relevant to you (or you can still see an overview of every platoon’s information if you want it to be that way). Further, this application would remove a lot of task overhead that comes with being the executive officer (XO), as it would automatically notify individuals if a new section was open for them to enter their information into. Further, it would notify them if they were approaching the deadline. Lastly, it would notify system administrators who didn’t fill out the information and automatically input an NCOR for the negligent individual. There would be 1 primary screen available. This screen would display simple text box entries that allow them to input their data (with items that needed to be filled out and are due soonest being prioritized at the top). Items already filled out on this screen would show what was previously input.>>> instructions: <<<• “Abstract” • “Key Words”• “1. Motivation” – Describe the project in terms of what you are creating and why. • “2. Related Work” – As possible, include references to at least two examples of other attempts to solve a similar type of problem; list these in your References. If your project’s application or site is particularly unusual and creative, it may be difficult to find highly similar previous work; you should identify and describe those that have the greatest similarity to your idea. • “3. Interface Requirements” – Discuss the primary actors and uses cases required for your application in at least two paragraphs. Support the discussion of requirements with figures that include the use case diagram and specifications for at least three (3) use cases. The use cases you select should be the functionality that is most critical to the application and will likely be implemented in the prototype. Be sure to include nonfunctional requirements and constraints related to the usability and security of the application with the use cases. • “4. Interface Design” • “5. Threat Modeling and Risk Assessment” • “6. Prototype” • “7. Interface Evaluation” • “8. Future Work” • “9. Conclusion”>>> attached is a photo example of the excel-based master tracket that we currently use. follow the instructions for expansion
+ChatGPT said:
+West Point Master Tracker App
+Here's the expanded project outline for your secure interface design class. Let me know if you need to adjust any sections, add diagrams, or dive deeper into specific components like threat modeling or interface requirements!
+You said:
+Asked ChatGPT
+make the related work section simply about excel
+ChatGPT said:
+West Point Master Tracker App
+Abstract
+This project is a mobile application for West Point that makes the current Excel-based “Master Tracker” system more efficient and accessible. The application will streamline data entry, improve task management efficiency, and ensure timely compliance with administrative requirements. Through secure design principles, this app will enhance both usability and security while reducing overhead for executive officers (XOs).
+Key Words
+Master Tracker, Mobile Application, Task Management, Data Entry, Notifications
+1. Motivation
+At West Point, the Master Tracker system is an important tool used to manage administrative and operational tasks across platoons. Currently, this system is employed in an Excel format, which requires manual data entry and constant monitoring by executive officers (XOs). This process is time-consuming and inefficient. The proposed mobile application aims to simplify many of these tasks by offering a streamlined interface and personalized notifications. This will reduce administrative burdens, allowing cadets to focus on their school, people, and athletic responsibilities.
+2. Related Work
+1. Excel: The current Master Tracker system at West Point relies heavily on Excel for task management and data entry. While Excel provides a flexible platform for organizing information, it requires manual updates and constant oversight. This manual process increases the likelihood of delays in task completion and administrative inefficiencies. Furthermore, Excel lacks the capability to automate notifications or enforce compliance, placing additional burdens on executive officers.
+3. Interface Requirements
+Primary Actors:
+1. Cadets: Users responsible for entering their personal and administrative data into the system.
+2. Cadet Executive Officers (XOs): Administrators who oversee the completeness and accuracy of entries, receive notifications of missing data, and manage compliance.
+3. Gold Coats System Administrators: Responsible for maintaining the application’s security, user access control, and automation settings.
+Use Cases:
+1. Data Entry by Cadets: Cadets log into the app, view pending tasks prioritized by deadlines, and input required information via text fields. The app saves their entries and marks the tasks as complete.
+2. Automated Notifications: The system automatically notifies cadets of upcoming deadlines and alerts XOs about missing data. For unresponsive cadets, the system auto-generates an NCOR.
+3. Overview Access by XOs: XOs can view a comprehensive dashboard of their company's compliance status, filter by incomplete tasks, and manually adjust deadlines if needed.
+Nonfunctional Requirements:
+• Usability: The interface must be intuitive, with clear labeling, simple navigation, and responsive design to accommodate various screen sizes.
+• Security: The app must implement multi-factor authentication, encrypted data storage, and role-based access control to protect sensitive information.
+4. Interface Design
+The main screen of the application will display a list of pending tasks, with the most urgent ones prioritized at the top. Completed tasks will be marked and viewable for reference. Input fields will be simple text boxes pre-labeled with required information categories (e.g., “Phone Number,” “Room Number”). Navigation tabs will allow users to switch between personal tasks and a platoon-wide overview.
+5. Threat Modeling and Risk Assessment
+Potential threats include unauthorized access to sensitive cadet information and data manipulation. The application will mitigate these risks through:
+• Authentication and Authorization: Multi-factor authentication (MFA) and strict role-based access controls.
+• Data Encryption: End-to-end encryption for all data transmissions and encrypted storage for sensitive information.
+• Audit Logs: Logs of all data changes to detect unauthorized modifications.
+6. Prototype
+A clickable prototype will be developed using tools like Figma, showcasing key functionalities such as data entry, notification systems, and XO dashboards. The prototype will simulate the data flow and security mechanisms.
+7. Interface Evaluation
+The prototype’s usability and security will be evaluated through user testing with cadets and XOs. Feedback will be collected on ease of use, clarity of notifications, and perceived security. Additionally, security tests such as testing to get into the application without authorization will be conducted to assess vulnerabilities.
+8. Future Work
+Future iterations could integrate with existing West Point systems like CIS, add features like calendar synchronization, and expand functionality to include more administrative processes. Further, generative artificial intelligence could be introduced to interpret and flag potential compliance risks.
+9. Conclusion
+This application aims to revolutionize the administrative workflow at West Point by make the Master Tracker system more efficient. Through secure and user-friendly design, it will reduce the workload on cadet executive officers and improve data accuracy, input timeliness, and compliance across the platoon.
+
+Edited West Point Master Tracker App
+I’ve updated the related work section to focus solely on Excel. Let me know if there's anything else you'd like to adjust!
+You said:
+now create the text content for slides and present them in class to highlight the main elements of your project and report (the scored portions in the report that don’t have filler text).
+ChatGPT said:
+Master Tracker Slides
+Slide 1: Title Slide
+Title: West Point Master Tracker Mobile Application
+Subtitle: Streamlining Task Management for Cadets and XOs
+Presented by: [Your Name]
+Class: Secure Interface Design
+________________________________________
+Slide 2: Motivation
+Title: Why This Project?
+•	The Master Tracker system is essential for managing administrative and operational tasks across platoons.
+•	Current Excel format requires manual data entry and constant oversight by XOs.
+•	This process is time-consuming and inefficient.
+•	Goal: Simplify tasks with a mobile app featuring a streamlined interface and automated notifications.
+________________________________________
+Slide 3: Related Work
+Title: Limitations of Excel
+•	Manual Updates: Requires constant monitoring and manual entry.
+•	No Automation: Cannot send notifications or enforce compliance.
+•	Error-Prone: Increases chances of data entry errors and administrative inefficiencies.
+•	Our Solution: Automate processes and enhance efficiency with a secure mobile app.
+________________________________________
+Slide 4: Interface Requirements
+Title: Who Will Use the App?
+•	Cadets: Enter personal and administrative data.
+•	Cadet Executive Officers (XOs): Oversee data accuracy, receive alerts for missing info, manage compliance.
+•	Gold Coats System Administrators: Maintain app security, user access, and automation settings.
+________________________________________
+Slide 5: Use Cases
+Title: Key Functionalities
+1.	Data Entry by Cadets: View prioritized tasks, input required info, mark as complete.
+2.	Automated Notifications: Alerts for upcoming deadlines, NCOR auto-generation for unresponsive cadets.
+3.	XO Overview Access: Dashboard for company compliance, filter incomplete tasks, adjust deadlines.
+________________________________________
+Slide 6: Nonfunctional Requirements
+Title: Usability & Security
+•	Usability: Intuitive interface, clear labeling, responsive design for all devices.
+•	Security: Multi-factor authentication, encrypted data storage, role-based access control.
+________________________________________
+Slide 7: Interface Design
+Title: What Will It Look Like?
+•	Main Screen: Pending tasks prioritized by deadlines.
+•	Completed Tasks: Clearly marked and viewable for reference.
+•	Navigation Tabs: Switch between personal tasks and platoon-wide overview.
+________________________________________
+Slide 8: Threat Modeling & Risk Assessment
+Title: Keeping Data Secure
+•	Threats: Unauthorized access, data manipulation.
+•	Mitigations:
+o	Multi-factor authentication (MFA)
+o	End-to-end encryption
+o	Audit logs to detect unauthorized changes
+________________________________________
+Slide 9: Prototype
+Title: Bringing It to Life
+•	Tools: Clickable prototype created using Figma.
+•	Features: Simulates data entry, notification systems, XO dashboards.
+•	Focus: Demonstrate data flow and security mechanisms.
+________________________________________
+Slide 10: Interface Evaluation
+Title: Testing the Prototype
+•	User Testing: Conducted with cadets and XOs for usability and security feedback.
+•	Focus Areas: Ease of use, clarity of notifications, perceived security.
+•	Security Tests: Attempts to bypass authentication to assess vulnerabilities.
+________________________________________
+Slide 11: Future Work
+Title: What’s Next?
+•	Integration: Connect with West Point systems like CIS.
+•	New Features: Calendar sync, expanded administrative functionalities.
+•	AI Integration: Use AI to predict and flag compliance risks.
+________________________________________
+Slide 12: Conclusion
+Title: Final Thoughts
+•	This app will revolutionize the administrative workflow at West Point.
+•	Key Benefits:
+o	Reduced workload for XOs.
+o	Improved data accuracy and timeliness.
+o	Enhanced compliance and task management efficiency.
+•	Thank You!
+•	Questions?
+
+Answer in chat instead
+Here’s the text content for your slides, focusing on the key elements of your project. Let me know if you need help with visuals or further refinements for your class presentation!
+
+\end{lstlisting}
+
+
+\section{Conversation with Lucid Chart's Generative Design diagram function}
+\begin{lstlisting}
+I am a programmer, creating a  flowchart for my mobile application. I have three use cases that the user should be able to logically flow through after logging in. there are two possible roles: cadet and XO. Both need to be able to recieve notifications. I would like your help to Generate a flowchart that depicts the possible user paths the user can take as they navigate through this application. It should be obvious from the flowchart how a user can accomplish each of my three distinct use cases from the home screen. My use cases are as follows: Data Entry by Cadets: 
+1.Cadets log into the app, view pending tasks prioritized by deadlines, and input required information via text fields. The app saves their entries and marks the tasks as complete. 
+2.Automated Notifications: The system automatically notifies cadets of upcoming deadlines and alerts XOs about missing data. For unresponsive cadets, the system auto-generates an NCOR. 
+3.Overview Access by XOs: XOs can view a comprehensive dashboard of their company's compliance status, filter by incomplete tasks, and manually adjust deadlines if needed.
+
+\end{lstlisting}
+
+
+\end{document}
