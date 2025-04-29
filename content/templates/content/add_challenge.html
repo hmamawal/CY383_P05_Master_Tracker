@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body justify-content-center">
+                    <h2 class="card-title text-center mb-4">Add a New Challenge</h2>
+                        <form method="post">                    
+                            {% csrf_token %}
+                            <div class="form-group text-center justify-content-center">
+                                <label for="title">Title</label>
+                                <input type="text" class="form-control" id="title" name="title" required>
+                            </div>
+                            <div class="form-group text-center justify-content-center">
+                                <label for="start_date">Start Date</label>
+                                <input type="date" class="form-control" id="start_date" name="start_date" required>
+                            </div>
+                            <div class="form-group text-center justify-content-center">
+                                <label for="end_date">End Date</label>
+                                <input type="date" class="form-control" id="end_date" name="end_date" required>
+                            </div>
+                            <div class="form-group text-center justify-content-center">
+                                <label for="description">Description</label>
+                                <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                            </div>
+                            <div class="input-group justify-content-center">
+                                <button type="submit" class="btn btn-primary btn-block">Create Challenge</button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom CSS for field alignment */   
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>
+
+{% endblock %}

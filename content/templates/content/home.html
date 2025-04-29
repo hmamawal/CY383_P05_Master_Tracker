@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to FitFrenzy!</h1>
+        <p class="lead">Join our fitness challenges and stay active!</p>
+    </div>
+</section>
+
+{% if user.is_authenticated %}
+<section class="challenges">
+    <div class="card shadow">
+        <div class="container">
+            <h2 class="mb-4">Competitions</h2>
+            <div class="row">
+                {% for challenge in challenges|dictsort:"start_date" %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ challenge.title }}</h3>
+                            <p class="card-text">{{ challenge.start_date|date:"F d, Y" }} - {{ challenge.end_date|date:"F d, Y" }}</p>
+                            <a href="{% url 'challenge_detail' challenge.id %}" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Link to Bootstrap JavaScript (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<style>
+    /* Define your custom CSS here */
+    .card-body {
+        background-color: black; /* Background color with opacity */
+        text-align: center;
+        color: white;
+    }
+
+    .card {
+        background-color: whitesmoke;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-family: harrington;
+        text-align: center;
+    }
+</style>
+{% endblock %}

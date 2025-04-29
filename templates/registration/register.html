@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body justify-content-center">
+                    <h2 class="card-title text-center mb-4">Account Registration</h2>
+                    {% if msg %}
+                        <small>{{ msg | safe }}</small>
+                    {% endif %}
+                    
+                    {% if not success %}
+
+                        <form method="post">
+                            {% csrf_token %}
+
+                            {% for field in form %}
+
+                                <div class="form-group text-center">
+                                    {{field.label}}
+                                    <div class="input-group justify-content-center">
+                                        {{field}}
+                                    </div>
+                                </div>
+                                <span class="text-danger">{{ field.errors }}</span>
+
+                            {% endfor %}
+                            <div class="input-group justify-content-center">
+                                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                            </div>
+                        </form>
+                    {% endif %}
+
+                    <div class="mt-3 text-center">
+                        <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom CSS for field alignment */   
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Optional: Increase spacing between form groups for visual separation */
+    .mt-3 {
+        margin-top: 20px;
+    }
+</style>
+
+{% endblock %}
+
+
+
+
+
+
