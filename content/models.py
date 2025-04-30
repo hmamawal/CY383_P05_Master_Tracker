@@ -39,8 +39,10 @@ class Task(models.Model):
     def is_overdue(self):
         return self.due_date < timezone.now() and self.status == 'PENDING'
     
+    @property
     def days_until_due(self):
-        delta = self.due_date - timezone.now()
+        """Calculate days until (or since) due date"""
+        delta = self.due_date.date() - timezone.now().date()
         return delta.days
 
 class NCOR(models.Model):

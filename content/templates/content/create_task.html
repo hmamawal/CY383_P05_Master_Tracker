@@ -17,22 +17,30 @@
             <form method="post" id="create-task-form">
                 {% csrf_token %}
                 
+                {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {% for error in form.non_field_errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
                 <div class="form-group">
                     <label for="id_title">Title</label>
                     {{ form.title.errors }}
-                    <input type="text" class="form-control" name="title" id="id_title" required>
+                    <input type="text" class="form-control" name="title" id="id_title" value="{{ form.title.value|default:'' }}" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="id_description">Description</label>
                     {{ form.description.errors }}
-                    <textarea class="form-control" name="description" id="id_description" rows="4" required></textarea>
+                    <textarea class="form-control" name="description" id="id_description" rows="4" required>{{ form.description.value|default:'' }}</textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="id_due_date">Due Date</label>
                     {{ form.due_date.errors }}
-                    <input type="datetime-local" class="form-control" name="due_date" id="id_due_date" required>
+                    <input type="datetime-local" class="form-control" name="due_date" id="id_due_date" value="{{ form.due_date.value|default:'' }}" required>
                 </div>
                 
                 <div class="form-group">
@@ -45,10 +53,18 @@
                 <div class="form-group">
                     <label>Assign To</label>
                     {{ form.assignees.errors }}
-                    <div id="assignee-loading">Loading cadets...</div>
-                    <div id="assignee-list" style="display:none;">
-                        {{ form.assignees }}
+                    <div id="assignee-selection-area">
+                        {% if form.assignees.field.queryset.exists %}
+                            <div class="assignee-list">
+                                {{ form.assignees }}
+                            </div>
+                        {% else %}
+                            <div id="assignee-message" class="alert alert-info">
+                                Enter a platoon and click "Load Cadets" to see available cadets
+                            </div>
+                        {% endif %}
                     </div>
+                    <button type="button" id="load-cadets-btn" class="btn btn-info btn-sm mt-2">Load Cadets</button>
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Create Task</button>
@@ -61,51 +77,68 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const platoonField = document.getElementById('id_platoon');
-        const assigneeLoading = document.getElementById('assignee-loading');
-        const assigneeList = document.getElementById('assignee-list');
+        const form = document.getElementById('create-task-form');
+        const loadCadetsBtn = document.getElementById('load-cadets-btn');
         
-        // Function to load assignees when platoon changes
-        function loadAssignees() {
+        // Handle clicking the "Load Cadets" button
+        loadCadetsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
             const platoon = platoonField.value;
             if (!platoon) {
-                assigneeLoading.textContent = "Enter a platoon to see available cadets";
-                assigneeList.style.display = 'none';
+                alert('Please enter a platoon identifier first');
                 return;
             }
             
-            assigneeLoading.textContent = "Loading cadets for " + platoon + "...";
-            assigneeList.style.display = 'none';
+            // Add a hidden input to indicate this is just for populating assignees
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'populate_assignees';
+            hiddenInput.value = 'true';
             
-            // In a full implementation, this would be an AJAX call to get cadets by platoon
-            // For this prototype, we'll simulate with a timeout
-            setTimeout(() => {
-                assigneeLoading.style.display = 'none';
-                assigneeList.style.display = 'block';
-                
-                // This is where you'd populate the assignees list from an AJAX response
-                // For now, the form will need to be submitted to see the updated list
-                if (document.querySelectorAll('#assignee-list input').length === 0) {
-                    assigneeList.innerHTML = '<div class="alert alert-info">Submit the form to load available cadets for this platoon</div>';
-                }
-            }, 500);
-        }
-        
-        // Load assignees on page load and when platoon changes
-        platoonField.addEventListener('change', loadAssignees);
-        loadAssignees(); // Initial load
-        
-        // Handle form submission
-        const form = document.getElementById('create-task-form');
-        form.addEventListener('submit', function(e) {
-            const title = document.getElementById('id_title').value;
-            const dueDate = document.getElementById('id_due_date').value;
-            const platoon = document.getElementById('id_platoon').value;
+            // Save the entered values to sessionStorage
+            sessionStorage.setItem('task_title', document.getElementById('id_title').value || '');
+            sessionStorage.setItem('task_description', document.getElementById('id_description').value || '');
+            sessionStorage.setItem('task_due_date', document.getElementById('id_due_date').value || '');
             
-            if (!title || !dueDate || !platoon) {
-                e.preventDefault();
-                alert('Please fill out all required fields');
-            }
+            // Append hidden input and submit
+            form.appendChild(hiddenInput);
+            form.submit();
         });
+        
+        // Restore saved values when page loads (after platoon change refresh)
+        const savedTitle = sessionStorage.getItem('task_title');
+        const savedDescription = sessionStorage.getItem('task_description');
+        const savedDueDate = sessionStorage.getItem('task_due_date');
+        
+        if (savedTitle) document.getElementById('id_title').value = savedTitle;
+        if (savedDescription) document.getElementById('id_description').value = savedDescription;
+        if (savedDueDate) document.getElementById('id_due_date').value = savedDueDate;
+        
+        // Clear storage after retrieving values
+        sessionStorage.removeItem('task_title');
+        sessionStorage.removeItem('task_description');
+        sessionStorage.removeItem('task_due_date');
     });
 </script>
+
+<style>
+    .assignee-list {
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    .assignee-list ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .assignee-list li {
+        padding: 5px 0;
+    }
+    .assignee-list input[type="checkbox"] {
+        margin-right: 10px;
+    }
+</style>
 {% endblock %}

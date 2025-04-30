@@ -92,7 +92,7 @@
                                 </span>
                             </div>
                             {% if is_xo %}
-                            <small class="text-muted">Assigned to: {{ task.assignee.username }}</small>
+                            <small class="text-muted">Assigned to: {{ task.assignee.username }} (Platoon: {{ task.platoon }})</small>
                             {% endif %}
                         </li>
                         {% endfor %}
@@ -122,7 +122,7 @@
                                 <span class="badge badge-success">Completed</span>
                             </div>
                             {% if is_xo %}
-                            <small class="text-muted">Completed by: {{ task.assignee.username }}</small>
+                            <small class="text-muted">Completed by: {{ task.assignee.username }} (Platoon: {{ task.platoon }})</small>
                             {% endif %}
                         </li>
                         {% endfor %}
@@ -152,13 +152,13 @@
                                 </a>
                                 <span class="badge badge-danger">
                                     {% if task.days_until_due < 0 %}
-                                        {{ task.days_until_due|cut:"-" }} days overdue
+                                        {{ task.days_until_due|stringformat:"+d"|cut:"+" }} days overdue
                                     {% else %}
-                                        {{ task.days_until_due }} days overdue
+                                        Overdue
                                     {% endif %}
                                 </span>
                             </div>
-                            <small class="text-muted">Assigned to: {{ task.assignee.username }}</small>
+                            <small class="text-muted">Assigned to: {{ task.assignee.username }} (Platoon: {{ task.platoon }})</small>
                         </li>
                         {% endfor %}
                     </ul>

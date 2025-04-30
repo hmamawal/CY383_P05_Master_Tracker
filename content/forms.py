@@ -19,9 +19,9 @@ class TaskForm(forms.ModelForm):
     
     # Dynamic field to select assignees based on platoon
     assignees = forms.ModelMultipleChoiceField(
-        queryset=User.objects.none(),
+        queryset=User.objects.all(),  # Start with all users, will be filtered in __init__
         widget=forms.CheckboxSelectMultiple,
-        required=False
+        required=True  # Make this required to ensure tasks are assigned
     )
     
     def __init__(self, *args, **kwargs):
@@ -29,10 +29,10 @@ class TaskForm(forms.ModelForm):
         self.creator = kwargs.pop('creator', None)
         super(TaskForm, self).__init__(*args, **kwargs)
         
-        # If platoon is provided in POST data, filter users by that platoon
-        if 'platoon' in self.data:
+        # If platoon is provided in initial data, filter users by that platoon
+        if 'initial' in kwargs and 'platoon' in kwargs['initial']:
             try:
-                platoon = self.data.get('platoon')
+                platoon = kwargs['initial']['platoon']
                 # Get users with the specified platoon in their profile
                 profiles = UserProfile.objects.filter(platoon=platoon, role='CADET')
                 self.fields['assignees'].queryset = User.objects.filter(
@@ -40,6 +40,26 @@ class TaskForm(forms.ModelForm):
                 )
             except (ValueError, TypeError):
                 pass
+        
+        # If platoon is provided in POST data, filter users by that platoon
+        if args and args[0] and 'platoon' in args[0]:
+            try:
+                platoon = args[0].get('platoon')
+                # Get users with the specified platoon in their profile
+                profiles = UserProfile.objects.filter(platoon=platoon, role='CADET')
+                self.fields['assignees'].queryset = User.objects.filter(
+                    profile__in=profiles
+                )
+            except (ValueError, TypeError):
+                pass
+
+    def clean(self):
+        cleaned_data = super().clean()
+        # Make sure at least one assignee is selected
+        assignees = cleaned_data.get('assignees')
+        if not assignees or len(assignees) == 0:
+            raise forms.ValidationError("You must select at least one cadet to assign this task to.")
+        return cleaned_data
 
 class TaskCompletionForm(forms.ModelForm):
     """Form for cadets to mark tasks as completed"""

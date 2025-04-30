@@ -32,15 +32,18 @@ def task_dashboard(request):
     """Main dashboard showing tasks based on user role"""
     user = request.user
     profile = UserProfile.objects.get(user=user)
+    now = timezone.now()
     
     if profile.is_xo or profile.is_admin:
-        # XOs see all tasks for their platoon
-        tasks_pending = Task.objects.filter(platoon=profile.platoon, status='PENDING')
-        tasks_completed = Task.objects.filter(platoon=profile.platoon, status='COMPLETED')
+        # XOs see ALL tasks for ALL cadets, not just their platoon
+        # Remove the platoon filter to see all tasks
+        tasks_pending = Task.objects.filter(status='PENDING')
+        tasks_completed = Task.objects.filter(status='COMPLETED')
+        
+        # Find overdue tasks - those with due date in the past but still pending
         tasks_overdue = Task.objects.filter(
-            platoon=profile.platoon, 
             status='PENDING',
-            due_date__lt=timezone.now()
+            due_date__lt=now
         )
         
         context = {
@@ -115,37 +118,56 @@ def create_task(request):
         return HttpResponseForbidden("Only Executive Officers can create tasks.")
     
     if request.method == 'POST':
+        # Check if this is just to populate assignees list
+        if 'populate_assignees' in request.POST:
+            form = TaskForm(request.POST, creator=user)
+            # Return to the form with the updated assignees list
+            return render(request, 'content/create_task.html', {
+                'form': form
+            })
+        
+        # Otherwise process the actual task creation
         form = TaskForm(request.POST, creator=user)
         if form.is_valid():
-            task = form.save(commit=False)
-            task.creator = user
-            task.save()
-            
-            # Assign task to all selected assignees
+            # Get data from the form but don't save yet
+            task_title = form.cleaned_data.get('title')
+            task_description = form.cleaned_data.get('description')
+            task_due_date = form.cleaned_data.get('due_date')
+            task_platoon = form.cleaned_data.get('platoon')
             assignees = form.cleaned_data.get('assignees')
+            
+            if not assignees or len(assignees) == 0:
+                messages.error(request, "You must select at least one cadet to assign this task to.")
+                return render(request, 'content/create_task.html', {'form': form})
+            
+            # Create task instances directly for each assignee
+            assignment_count = 0
             for assignee in assignees:
-                # Create a copy of the task for each assignee
                 task_instance = Task.objects.create(
-                    title=task.title,
-                    description=task.description,
-                    due_date=task.due_date,
-                    created_date=task.created_date,
+                    title=task_title,
+                    description=task_description,
+                    due_date=task_due_date,
+                    created_date=timezone.now(),
                     status='PENDING',
-                    assignee=assignee,
+                    assignee=assignee,  # Set the assignee here
                     creator=user,
-                    platoon=task.platoon
+                    platoon=task_platoon
                 )
+                assignment_count += 1
                 
                 # Create notification for each assignee
                 Notification.objects.create(
                     user=assignee,
                     task=task_instance,
                     notification_type='NEW_TASK',
-                    message=f"You have been assigned a new task: {task.title}"
+                    message=f"You have been assigned a new task: {task_title}"
                 )
             
-            messages.success(request, f"Task '{task.title}' created and assigned to {len(assignees)} cadets.")
+            messages.success(request, f"Task '{task_title}' created and assigned to {assignment_count} cadet(s).")
             return redirect('task_dashboard')
+        else:
+            # Form has validation errors, they will be displayed in the template
+            pass
     else:
         form = TaskForm(creator=user, initial={'platoon': profile.platoon})
     
