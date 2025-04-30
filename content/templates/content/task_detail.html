@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'task_dashboard' %}">Tasks</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ task.title }}</li>
+        </ol>
+    </nav>
+    
+    <div class="card">
+        <div class="card-header {% if task.is_overdue %}bg-danger{% elif task.status == 'COMPLETED' %}bg-success{% else %}bg-primary{% endif %} text-white">
+            <h2 class="mb-0">{{ task.title }}</h2>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <h5>Details</h5>
+                    <p class="mb-1"><strong>Due Date:</strong> {{ task.due_date|date:"F j, Y, g:i a" }}</p>
+                    <p class="mb-1"><strong>Status:</strong> 
+                        {% if task.status == 'PENDING' %}
+                            <span class="badge badge-warning">Pending</span>
+                        {% elif task.status == 'COMPLETED' %}
+                            <span class="badge badge-success">Completed</span>
+                        {% else %}
+                            <span class="badge badge-danger">Overdue</span>
+                        {% endif %}
+                    </p>
+                    <p class="mb-1"><strong>Platoon:</strong> {{ task.platoon }}</p>
+                    {% if is_xo %}
+                        <p class="mb-1"><strong>Assigned To:</strong> {{ task.assignee.username }}</p>
+                        <p class="mb-1"><strong>Created By:</strong> {{ task.creator.username }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                    <h5>Description</h5>
+                    <div class="p-3 bg-light rounded">
+                        {{ task.description|linebreaks }}
+                    </div>
+                </div>
+            </div>
+            
+            {% if is_assignee and task.status == 'PENDING' %}
+                <hr>
+                <h5>Mark Task as Completed</h5>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.status }}
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="confirmation" id="id_confirmation" required>
+                        <label class="form-check-label" for="id_confirmation">
+                            I confirm that I have completed this task
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Mark as Completed</button>
+                </form>
+            {% endif %}
+            
+            {% if is_xo and task.status == 'PENDING' %}
+                <hr>
+                <div class="alert alert-warning">
+                    <h5>XO Actions</h5>
+                    <p>As an XO, you can track this task's progress but cannot mark it as complete on behalf of the cadet.</p>
+                    <p>You can send a reminder to the cadet by clicking the button below:</p>
+                    <!-- This is a placeholder. In a full implementation, you could add AJAX functionality to send reminders -->
+                    <button class="btn btn-warning" id="send-reminder" data-task-id="{{ task.id }}">Send Reminder</button>
+                </div>
+            {% endif %}
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'task_dashboard' %}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Basic placeholder for the send reminder function
+    document.addEventListener('DOMContentLoaded', function() {
+        const reminderBtn = document.getElementById('send-reminder');
+        if (reminderBtn) {
+            reminderBtn.addEventListener('click', function() {
+                alert('Reminder sent to cadet. This would trigger an actual notification in a full implementation.');
+                // In a full implementation, this would make an AJAX call to a view that creates a notification
+            });
+        }
+    });
+</script>
+{% endblock %}

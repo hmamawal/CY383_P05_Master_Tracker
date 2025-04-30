@@ -1,10 +1,16 @@
-from django.shortcuts import render, redirect
-from .models import Challenge
-from .forms import ChallengeForm
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required 
+from django.contrib.auth.decorators import login_required
+from django.utils import timezone
+from django.contrib import messages
+from django.http import JsonResponse, HttpResponseForbidden
+from django.contrib.auth.models import User
+from django.db.models import Q
+from .models import Challenge, Task, NCOR, Notification
+from .forms import ChallengeForm, TaskForm, TaskCompletionForm
+from accounts.models import UserProfile
+from datetime import timedelta
 
-# Create your views here.
+# Original Challenge related views
 @login_required
 def home(request):
     # retrieve all challenges
@@ -35,3 +41,241 @@ def challenge_detail(request, challenge_id):
         challenge.save()     
 
     return render(request, 'content/challenge_detail.html', {'challenge': challenge})
+
+# Task related views
+@login_required
+def task_dashboard(request):
+    """Main dashboard showing tasks based on user role"""
+    user = request.user
+    profile = UserProfile.objects.get(user=user)
+    
+    if profile.is_xo or profile.is_admin:
+        # XOs see all tasks for their platoon
+        tasks_pending = Task.objects.filter(platoon=profile.platoon, status='PENDING')
+        tasks_completed = Task.objects.filter(platoon=profile.platoon, status='COMPLETED')
+        tasks_overdue = Task.objects.filter(
+            platoon=profile.platoon, 
+            status='PENDING',
+            due_date__lt=timezone.now()
+        )
+        
+        context = {
+            'tasks_pending': tasks_pending,
+            'tasks_completed': tasks_completed,
+            'tasks_overdue': tasks_overdue,
+            'is_xo': True,
+        }
+    else:
+        # Cadets see only their tasks
+        tasks_pending = Task.objects.filter(assignee=user, status='PENDING')
+        tasks_completed = Task.objects.filter(assignee=user, status='COMPLETED')
+        
+        context = {
+            'tasks_pending': tasks_pending,
+            'tasks_completed': tasks_completed,
+            'is_xo': False,
+        }
+    
+    # Get unread notifications for the user
+    notifications = Notification.objects.filter(user=user, read=False)
+    context['notifications'] = notifications
+    
+    return render(request, 'content/task_dashboard.html', context)
+
+@login_required
+def task_detail(request, task_id):
+    """View task details and allow completion"""
+    task = get_object_or_404(Task, pk=task_id)
+    user = request.user
+    profile = UserProfile.objects.get(user=user)
+    
+    # Check if user is authorized to view this task
+    if task.assignee != user and not profile.is_xo and profile.platoon != task.platoon:
+        return HttpResponseForbidden("You do not have permission to view this task.")
+    
+    if request.method == 'POST' and task.assignee == user:
+        form = TaskCompletionForm(request.POST, instance=task)
+        if form.is_valid() and form.cleaned_data['confirmation']:
+            task.status = 'COMPLETED'
+            task.save()
+            
+            # Create a completion notification for the XO
+            xo_users = User.objects.filter(profile__role='XO', profile__platoon=task.platoon)
+            for xo in xo_users:
+                Notification.objects.create(
+                    user=xo,
+                    task=task,
+                    notification_type='COMPLETED',
+                    message=f"Task '{task.title}' has been completed by {user.username}."
+                )
+                
+            messages.success(request, "Task marked as completed successfully!")
+            return redirect('task_dashboard')
+    else:
+        form = TaskCompletionForm()
+    
+    return render(request, 'content/task_detail.html', {
+        'task': task,
+        'form': form,
+        'is_assignee': task.assignee == user,
+        'is_xo': profile.is_xo,
+    })
+
+@login_required
+def create_task(request):
+    """Allow XOs to create new tasks"""
+    user = request.user
+    profile = UserProfile.objects.get(user=user)
+    
+    if not profile.is_xo and not profile.is_admin:
+        return HttpResponseForbidden("Only Executive Officers can create tasks.")
+    
+    if request.method == 'POST':
+        form = TaskForm(request.POST, creator=user)
+        if form.is_valid():
+            task = form.save(commit=False)
+            task.creator = user
+            task.save()
+            
+            # Assign task to all selected assignees
+            assignees = form.cleaned_data.get('assignees')
+            for assignee in assignees:
+                # Create a copy of the task for each assignee
+                task_instance = Task.objects.create(
+                    title=task.title,
+                    description=task.description,
+                    due_date=task.due_date,
+                    created_date=task.created_date,
+                    status='PENDING',
+                    assignee=assignee,
+                    creator=user,
+                    platoon=task.platoon
+                )
+                
+                # Create notification for each assignee
+                Notification.objects.create(
+                    user=assignee,
+                    task=task_instance,
+                    notification_type='NEW_TASK',
+                    message=f"You have been assigned a new task: {task.title}"
+                )
+            
+            messages.success(request, f"Task '{task.title}' created and assigned to {len(assignees)} cadets.")
+            return redirect('task_dashboard')
+    else:
+        form = TaskForm(creator=user, initial={'platoon': profile.platoon})
+    
+    return render(request, 'content/create_task.html', {
+        'form': form
+    })
+
+@login_required
+def mark_notification_read(request, notification_id):
+    """Mark a notification as read"""
+    notification = get_object_or_404(Notification, pk=notification_id, user=request.user)
+    notification.read = True
+    notification.save()
+    return JsonResponse({'status': 'success'})
+
+@login_required
+def generate_ncors(request):
+    """Generate NCORs for overdue tasks - should be called by a scheduler"""
+    # Only XOs and admins can manually trigger NCOR generation
+    if not request.user.profile.is_xo and not request.user.profile.is_admin:
+        return HttpResponseForbidden("Only XOs and admins can generate NCORs.")
+        
+    # Find all overdue tasks
+    overdue_tasks = Task.objects.filter(
+        status='PENDING',
+        due_date__lt=timezone.now()
+    )
+    
+    ncor_count = 0
+    for task in overdue_tasks:
+        # Check if NCOR already exists
+        if not NCOR.objects.filter(task=task, user=task.assignee).exists():
+            # Create NCOR
+            ncor = NCOR.objects.create(
+                task=task,
+                user=task.assignee,
+                description=f"Failed to complete '{task.title}' by the deadline ({task.due_date.strftime('%Y-%m-%d %H:%M')})."
+            )
+            ncor_count += 1
+            
+            # Create notification for the cadet
+            Notification.objects.create(
+                user=task.assignee,
+                task=task,
+                notification_type='NCOR',
+                message=f"An NCOR has been generated for your overdue task: {task.title}"
+            )
+            
+            # Update task status
+            task.status = 'OVERDUE'
+            task.save()
+    
+    messages.success(request, f"Generated {ncor_count} NCORs for overdue tasks.")
+    return redirect('task_dashboard')
+
+def check_upcoming_deadlines():
+    """
+    Function to check for upcoming deadlines and send notifications
+    This should be called by a scheduler/cron job
+    """
+    # Find tasks due within 48 hours
+    deadline_threshold = timezone.now() + timedelta(hours=48)
+    upcoming_tasks = Task.objects.filter(
+        status='PENDING',
+        due_date__lte=deadline_threshold,
+        due_date__gt=timezone.now()
+    )
+    
+    for task in upcoming_tasks:
+        # Create notification if one doesn't already exist
+        existing_notification = Notification.objects.filter(
+            user=task.assignee,
+            task=task,
+            notification_type='DEADLINE'
+        ).exists()
+        
+        if not existing_notification:
+            Notification.objects.create(
+                user=task.assignee,
+                task=task,
+                notification_type='DEADLINE',
+                message=f"Reminder: Task '{task.title}' is due on {task.due_date.strftime('%Y-%m-%d %H:%M')}"
+            )
+    
+    # Find tasks due within 24 hours and notify XOs
+    xo_threshold = timezone.now() + timedelta(hours=24)
+    urgent_tasks = Task.objects.filter(
+        status='PENDING',
+        due_date__lte=xo_threshold,
+        due_date__gt=timezone.now()
+    )
+    
+    # Group tasks by platoon
+    platoon_tasks = {}
+    for task in urgent_tasks:
+        if task.platoon not in platoon_tasks:
+            platoon_tasks[task.platoon] = []
+        platoon_tasks[task.platoon].append(task)
+    
+    # Notify XOs about tasks in their platoon
+    for platoon, tasks in platoon_tasks.items():
+        xo_profiles = UserProfile.objects.filter(role='XO', platoon=platoon)
+        for profile in xo_profiles:
+            for task in tasks:
+                existing_notification = Notification.objects.filter(
+                    user=profile.user,
+                    task=task,
+                    notification_type='DEADLINE'
+                ).exists()
+                
+                if not existing_notification:
+                    Notification.objects.create(
+                        user=profile.user,
+                        task=task,
+                        notification_type='DEADLINE',
+                        message=f"XO Alert: Task '{task.title}' for {task.assignee.username} is due within 24 hours"
+                    )
