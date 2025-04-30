@@ -31,9 +31,18 @@ class UserProfile(models.Model):
 # Signal to create user profile when a user is created
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
-    if created:
+    # Create a profile for new users or users without a profile
+    try:
+        # Try to access the profile to check if it exists
+        _ = instance.profile
+    except User.profile.RelatedObjectDoesNotExist:
+        # If it doesn't exist, create one
         UserProfile.objects.create(user=instance)
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+    try:
+        instance.profile.save()
+    except User.profile.RelatedObjectDoesNotExist:
+        # If profile doesn't exist, create it first
+        UserProfile.objects.create(user=instance)

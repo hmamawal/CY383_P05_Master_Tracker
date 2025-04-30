@@ -10,37 +10,21 @@ from .forms import ChallengeForm, TaskForm, TaskCompletionForm
 from accounts.models import UserProfile
 from datetime import timedelta
 
-# Original Challenge related views
+# Updated home view to show Master Tracker dashboard instead of challenges
 @login_required
 def home(request):
-    # retrieve all challenges
-    challenges = Challenge.objects.all()
-    # render the page with the information about the challenges
-    return render(request, 'content/home.html', {'challenges': challenges})
+    """Redirect to task dashboard as the main app interface"""
+    return redirect('task_dashboard')
 
 @login_required
 def add_challenge(request):
-    # upon submission, retrieve and save the form data if it is valid. Then redirect to the home page.
-    if request.method == 'POST':
-        form = ChallengeForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-    # otherwise, initialize the form and render the page to allow data entry
-    else:
-        form = ChallengeForm()
-    return render(request, 'content/add_challenge.html', {'form': form})
+    """Redirect to task dashboard instead of challenge creation"""
+    return redirect('task_dashboard')
 
 @login_required
 def challenge_detail(request, challenge_id):
-    challenge = get_object_or_404(Challenge, pk=challenge_id)
-
-    # Upon clicking the Join Challenge button, add the user to the participants of the challenge if the user is not already one.
-    if request.method == 'POST' and request.user not in challenge.participants.all():
-        challenge.participants.add(request.user)
-        challenge.save()     
-
-    return render(request, 'content/challenge_detail.html', {'challenge': challenge})
+    """Redirect to task dashboard instead of showing challenge details"""
+    return redirect('task_dashboard')
 
 # Task related views
 @login_required

@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-lg custom-navbar">
             <!-- Your navigation bar content here -->
             <div class="container">
-                <a class="navbar-brand text-white" href="#">West Point Master Tracker</a>
+                <a class="navbar-brand text-white" href="{% url 'task_dashboard' %}">West Point Master Tracker</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -22,7 +22,7 @@
                     <ul class="navbar-nav">
                         <!-- Add more navigation links here as needed -->
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link text-white" href="{% url 'task_dashboard' %}">Dashboard</a>
                         </li>
                         
                         {% if user.is_authenticated %}
@@ -44,15 +44,10 @@
                         </li>
                         {% endif %}
                         
-                        <!-- Original FitFrenzy Links -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Challenges
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'profile' %}">
+                                <i class="fas fa-user"></i> Profile
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'home' %}">View All</a>
-                                <a class="dropdown-item" href="{% url 'add_challenge' %}">Add New</a>
-                            </div>
                         </li>
                         
                         <li class="nav-item">
