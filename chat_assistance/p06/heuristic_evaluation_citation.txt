@@ -12,10 +12,10 @@ for the paper. These sections slightly tweaked.
 4. zap result photos given to chatgpt to transcribe into markdown then markdown given to 
 copilot to incorperate intot he security report: https://chatgpt.com/share/681c583b-c1cc-8003-9da5-ea0d33de207d
 5. copilot asked to analyze the code + results and write about the effectiveness of the counter measures. what it wrote was used largely without 
-modification.
+modification: https://github.com/hmamawal/CY383_P05_Master_Tracker/blob/main/chat_assistance/p06/security_analysis.md
 
 presentation creation:
-1. latex paper + beamer for overleaf instructions given to github copilot to create the presenation slides
+1. latex paper + beamer for overleaf instructions given to chatgpt to create the presenation slides: https://chatgpt.com/share/681c5f60-1d54-8003-a482-1a6359afdc4a
 
 citations
 1. this text file - https://github.com/hmamawal/CY383_P05_Master_Tracker/blob/main/chat_assistance/p06/heuristic_evaluation_citation.txt - given to chatgpt to format into better looking citations
