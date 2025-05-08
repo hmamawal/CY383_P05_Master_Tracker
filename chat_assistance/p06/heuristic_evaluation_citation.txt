@@ -1,0 +1,9 @@
+heuristic section work flow:
+1. got condensed and clarified information based on lesson 24 from this chat: https://chatgpt.com/share/681c3362-9a30-8003-8ac9-d4095909a00b
+2. gave this information to github copilot for context (see markdown document)
+3. took output from copilot and gave it to this chat to improve: https://chatgpt.com/share/681c33e6-c884-8003-ba41-fe9cb6d4ce27
+4. wrote justifications based on information given from markdown document chat. 
+
+security section work flow: 
+1. clarify whether lesson 26 or 25 is more pertinent: https://chatgpt.com/share/681c344d-bd64-8003-95e3-422a0acf6383
+2. 

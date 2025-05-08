@@ -1,0 +1,215 @@
+CY383:Secure Interface Design
+
+Lesson #25
+Evaluation of Software Security
+
+
+Quiz
+
+
+Lesson Objectives
+
+.
+Identify different software security testing techniques and methodologies commonly used for evaluating the security of user interfaces, such as vulnerability scanning, code review, and penetration testing.
+
+.
+Discuss the ethical considerations associated with software security testing, such as obtaining proper permissions, protecting user data during testing, and responsibly disclosing vulnerabilities.
+
+.
+Explore the use of security testing tools and frameworks for assessing the security posture of user interfaces, such as Bandit, Djlint, OWASP ZAP, and Burp Suite.
+
+
+
+
+Security Testing Overview
+
+.
+Techniques.
+Manual Inspections & Reviews
+
+.
+Threat Modeling
+
+.
+Source Code Review.
+Static Code Analysis
+
+
+
+
+.
+Penetration Testing.
+Vulnerability Scanner
+
+
+
+
+
+
+
+
+
+
+Ethical Considerations for Security Testing
+
+.
+Authorization.
+Explicit permission from system owner (RoE)
+
+
+
+
+.
+Transparency.
+Ethical hacker must state methodology, tools, and techniques.
+
+
+
+
+.
+Confidentiality of Results
+
+.
+Legal Compliance .
+Data protection, privacy, intellectual property
+
+
+
+
+.
+Liability for Damage
+
+.
+Documentation of the Test
+
+
+
+
+Automated Static Code Analysis
+
+.
+Tools typically support a specific language or set of languages
+
+.
+Best at identifying Syntax Errors.
+How does this impact the benefit to security testing?
+
+
+
+
+.
+Examples.
+Bandit – Python analyzer
+
+.
+The W3C Markup Validation Service – HTML analyzer
+
+.
+djLint – Django templates
+
+
+
+
+
+
+
+In-Class Exercise: Static Code Analysis
+
+.
+Apply Bandit and djLint to the Django Project you implemented in Lessons 21-23.
+
+.
+What errors and security vulnerabilities did the analyzers identify? 
+
+.
+How would you classify the severity of them?
+
+
+
+
+Penetration Testing
+
+.
+Hands-on testing with the goal of finding and exploiting vulnerabilities (aka ethical hacking).
+
+.
+Major Areas.
+Reconnaissance
+
+.
+Discovery & Probing
+
+.
+Enumeration & Password cracking
+
+.
+Vulnerability Scanning
+
+.
+Penetration
+
+.
+Physical Security
+
+
+
+
+
+
+.
+Examples.
+OWASP ZAP
+
+.
+Burp Suite | PortSwigger
+
+
+
+
+
+
+OWASP’s bug bounty program | Bugcrowd
+Burp Suite for Mac: Free Download + Review [Latest Version]
+
+Demonstration: Burp Proxy
+
+.
+Intercept the HTTP traffic for the web application developed during Lessons 21-23
+
+
+
+
+
+In-Class Exercise: Vulnerability Scanner
+
+.
+Scan the web application you developed in Lessons 21-23 using OWASP ZAP
+
+
+.
+How many vulnerabilities did the scanner identify?
+
+.
+Which vulnerabilities were most severe? 
+
+
+
+
+Security Testing in the Interaction Design Life Cycle Model
+
+Schematic illustration of a simple interaction design lifecycle model with the following steps: Discovering requirements, Evaluating, Prototyping, and Designing alternatives.
+Manual Inspections and Reviews
+Threat Modeling 
+
+Manual Inspections and Reviews
+Code Review
+
+Code Review
+
+Penetration Testing
+
+
+Backup Slides
+
+
+

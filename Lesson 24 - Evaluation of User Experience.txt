@@ -1,0 +1,661 @@
+CY383:Secure Interface Design
+
+Lesson #24
+Evaluation of User Experience
+
+
+Lesson Objectives
+
+.
+Identify the categories for evaluations of user experience and the associated methods.
+
+.
+Demonstrate the application of heuristics to inspect user interfaces for conformance to design principles.
+
+.
+Explain the process of planning and conducting usability testing sessions, including observation, interviews, and questionnaires.
+
+
+
+
+Course Recap
+
+
+
+Introduction to Evaluation
+
+
+Motivation for Evaluation
+
+Iterative design and evaluation is a continuous process:
+.
+Why: To check that all aspects of the user experience are taken into account in design
+
+.
+What: A conceptual model, early and subsequent prototypes of a new system, more complete prototypes, and to compare a design with competitors’ products
+
+.
+Where: Natural (in-the-wild) settings or in lab settings
+
+.
+When: Throughout design; formative or summative evaluation.
+
+
+
+
+Evaluation Methods
+
+.
+Categories.
+Controlled settings – directly involve participants
+
+.
+Natural settings – involve actual users
+
+.
+Any settings not directly involving participants
+
+
+
+
+.
+Remote evaluation may be used in any of the categories.
+
+
+
+
+Controlled Settings
+
+.
+Two primary methods.
+Usability Testing – test whether the product is usable for achieving tasks and user satisfaction
+
+.
+Experiments – test specific hypotheses about how users will perform
+
+
+
+
+.
+Evaluation is designed to control what participants do, when they do it, and for how long.
+
+.
+Reduces outside influence and distraction.
+
+
+
+
+Natural Settings
+
+.
+Primary method:.
+In-the-wild studies (field studies)
+
+
+
+
+.
+May be messy; activities often overlap and may be interrupted by unforeseen events.
+
+.
+Better sense of how the application will actually be used; harder to test specific hypotheses due to influence of environmental factors.
+
+
+
+
+Any Settings not directly involving participants
+
+.
+Range of methods.
+Heuristics – expert evaluation of the conformance to a set of principles
+
+.
+Walk-throughs – step through a task to note problematic usability features
+
+.
+Models – estimate of the efficiency of systems for various kinds of tasks (i.e. Fitts’ Law and evaluation of the time to reach a target with a pointing device)
+
+.
+Analytics – Automatic logging of user actions 
+
+
+
+
+
+
+
+ICE: Case Study – DeepTake and Automated Vehicles
+
+.
+Review the Case Study in the textbook (Section 14.4.1)
+
+.
+Answer the following:.
+At which point in the design process did the evaluation occur?
+
+.
+What kind of setting was used for the evaluation?
+
+.
+Which method(s) were used for evaluation?
+
+.
+What notable issues were encountered?
+
+.
+Which types of data were collected?
+
+
+
+
+
+
+
+Heuristic Evaluation
+
+.
+Developed by Jacob Nielsen in the early 1990s
+
+.
+Based on heuristics distilled from an empirical analysis of 249 usability problems
+
+.
+These heuristics have been revised for current technology by Nielsen and others for:.
+Mobile devices
+
+.
+Wearables
+
+.
+Virtual worlds
+
+.
+Social media
+
+.
+Other types of systems
+
+
+
+
+.
+Design guidelines often form a basis for developing heuristics
+
+.
+Experts or researchers use their knowledge of people and technology to review software usability (i.e. rate the application for each heuristic).
+
+.
+Critiques can be formal or informal
+
+
+
+
+Revised version (2014) of Nielsen’s original heuristics
+
+.
+Visibility of system status
+
+.
+Match between system and real world
+
+.
+User control and freedom
+
+.
+Consistency and standards
+
+.
+Error prevention
+
+.
+Recognition rather than recall
+
+.
+Flexibility and efficiency
+
+.
+Aesthestic and minimalist design
+
+.
+Support error recovery
+
+.
+Provide help and documentation
+
+
+
+
+Number of Evaluators
+
+.
+Nielsen suggests that on average 5 evaluators identify 75-80 % of usability problems
+
+.
+This often depends on the context or type of application (Cockton & Woolrych, 2001)
+
+.
+Also depends on the skills and experience of the evaluators
+
+
+
+Graphical representation of the proportion of usability problems in an interface found in heuristic evaluation using various numbers of evaluators.
+Source: Nielsen and Mack, 1994. Courtesy of Wiley.
+
+
+Execution of Heuristic Evaluation
+
+.
+Briefing session to tell evaluators what to do.
+Define Heuristics & Rating Scale
+
+
+
+
+.
+Evaluation period of 1-2 hours in which:.
+Each evaluator works separately
+
+.
+Take one pass to get a feel for the product
+
+.
+Take a second pass to focus on specific features
+
+
+
+
+.
+Debriefing session in which evaluators work together to prioritize problems
+
+
+
+
+Advantages and Problems
+
+.
+Few ethical and practical issues to consider because users are not involved
+
+.
+Can be difficult and expensive to find expert evaluators with knowledge of application domain and the people using it
+
+.
+Biggest problems:.
+Important problems may get missed
+
+.
+Many trivial problems are often identified, such as false alarms
+
+.
+Evaluators have biases
+
+
+
+
+
+
+
+Evaluating Accessibility using WCAG Guidelines
+
+.
+Web Content Accessibility Guidelines (WCAG) 
+
+
+    (Lazar et al., 2015)
+.
+Guidelines can be used as heuristics for evaluating websites
+
+.
+Governments and large corporations have to make their websites accessible by law
+
+.
+Four key concepts (POUR):.
+Perceivable – eg, provide text alternatives for non-text content
+
+.
+Operable – eg, make functionality available via a keyboard
+
+.
+Understandable – eg, make content appear and be readable in predictable ways
+
+.
+Robust – eg ensure compatibility with other tools 
+
+
+
+
+
+
+Source: WCAG 2.1 at a Glance.
+
+
+ICE – Apply Heuristic Evaluation
+
+.
+Considering the Canvas web application:.
+Select 3 heuristics that best apply to the application.
+
+.
+Develop a rating scheme for the heuristics.
+
+.
+Provide a heuristic evaluation of the application based on your group’s analysis.
+
+
+
+
+
+
+
+Usability Testing
+
+.
+Involves testing how people perform on products in controlled settings
+
+.
+The people being tested are observed and the time it takes them to complete a task and the number and kinds of errors they make are recorded
+
+.
+Data is recorded on video and key presses are logged
+
+.
+The data is used to calculate performance times and to identify and explain errors
+
+.
+User satisfaction is evaluated using questionnaires and interviews
+
+.
+Observations about how the product is used in more natural contexts, including in-the wild may be included
+
+
+
+
+Observation
+
+.
+Direct observation in the wild.
+Structuring frameworks
+
+.
+Degree of participation (passive or participant)
+
+.
+Ethnography
+
+
+
+
+.
+Direct observation in controlled environments.
+The Think-aloud technique
+
+
+
+
+.
+Indirect observation: tracking users’ activities.
+Diaries
+
+.
+Interaction logging, web analytics and data scraping
+
+.
+Video and photographs collected remotely, e.g. by drones
+
+.
+Wearable sensors and social media
+
+
+
+
+
+
+
+Interviews
+
+.
+Unstructured: Not directed by a script. Rich but not replicable.
+
+.
+Structured: Tightly scripted, often like a questionnaire. Replicable but may lack richness.
+
+.
+Semi-structured: Guided by a script, but interesting issues can be explored in more depth. Can provide a good balance between richness and replicability.
+
+.
+Focus groups: A group interview
+
+
+
+
+Interview Questions
+
+.
+Two types:.
+‘Closed questions’ have a predetermined answer format, for example, ‘yes’ or ‘no’
+
+.
+‘Open questions’ do not have a predetermined format
+
+
+
+
+.
+Closed questions are easier to analyze
+
+.
+Avoid:.
+Long questions
+
+.
+Compound sentences — split them into two
+
+.
+Jargon and language that the interviewee may not understand 
+
+.
+Leading questions that make assumptions, for example, why do you like …?
+
+.
+Unconscious biases, for instance, gender stereotypes
+
+
+
+
+
+
+
+Interview Execution
+
+.
+Introduction: Introduce yourself, explain the goals of the interview, reassure about the ethical issues, ask to record, and present the informed consent form.
+
+.
+Warm-up: Make first questions easy and non-threatening.
+
+.
+Main body: Present questions in a logical order
+
+.
+A cooling-off period: Include a few easy questions to defuse tension at the end
+
+.
+Closure: Thank interviewee, signal the end, for example, switch recorder off.
+
+
+
+
+Remote Interviews
+
+.
+Remote interviews and focus groups using digital conferencing systems such as Teams and Zoom, plus a collaboration platform such as Miro are common.
+
+.
+Some advantages are:.
+Participants are in their own environment and are more relaxed
+
+.
+Participants don’t have to travel
+
+.
+Participants don’t need to worry about what to wear
+
+.
+For interviews involving sensitive issues, it is easier for interviewees to be anonymous
+
+.
+Participants can leave the interview whenever they want to
+
+
+
+
+
+
+
+Questionnaires
+
+.
+Questions can be closed or open
+
+.
+Closed questions are easier to analyze, and may be distributed and analyzed by computer
+
+.
+Disseminated online so can be administered to large populations
+
+.
+Sampling can be a problem when the size of a population is unknown as is common in online evaluations
+
+
+
+
+Questionnaire Design
+
+.
+The impact of a question can be influenced by question order.
+
+.
+Different versions of the questionnaire may be needed for different populations.
+
+.
+Provide clear instructions on how to complete the questionnaire. 
+
+.
+Consider whether the questionnaire is too long
+
+.
+If the questionnaire is long consider allowing participants to opt out at certain stages.
+
+.
+Think about layout and pacing.
+
+
+
+
+Questionnaire Format
+
+•
+Closed-ended responses with predefined list: •
+radio buttons (single response)
+
+•
+check boxes (multiple responses)
+
+
+
+
+•
+Rating scales.
+Likert scales
+
+.
+Semantic differential scales
+
+.
+3, 5, 7 or more points
+
+
+
+
+•
+Open-ended responses
+
+
+
+
+Questionnaire Guidelines
+
+.
+Make the purpose of study clear
+
+.
+Promise anonymity
+
+.
+Design the questionnaire carefully and run a pilot study
+
+.
+Offer a short version for those who do not have time to complete a long questionnaire
+
+.
+Follow-up with prompting messages
+
+.
+Provide an incentive, e.g. voucher
+
+.
+40 percent response rate is generally acceptable but much lower rates are common
+
+
+
+
+Quantitative measures
+
+.
+Primarily from Observation:.
+Number of participants successfully completing the task
+
+.
+Time to complete the task
+
+.
+Time to complete the task after time away from it
+
+.
+Number and type of errors per task
+
+.
+Number of errors per unit of time
+
+.
+Number of times people navigate to an item such as online help
+
+.
+Number of people making the same or similar errors
+
+
+
+
+
+
+Source: Wixon and Wilson, 1997
+
+
+Qualitative Measures
+
+.
+Primarily from Interviews and Questionnaires.
+User satisfaction level for components of the application
+
+.
+Perceptions toward the application
+
+.
+Possible explanation of issues with the application
+
+
+
+
+
+
+
+

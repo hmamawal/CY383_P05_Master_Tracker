@@ -1,0 +1,75 @@
+### What is Heuristic Evaluation?
+
+**Heuristic evaluation** is a usability inspection method where one or more **experts** review a user interface (such as a website) to identify **usability issues** based on a set of established usability principles called **heuristics**. It does **not involve users** directly and can be done early in the design process or on a finished product.
+
+This method was developed by **Jakob Nielsen** in the early 1990s and remains widely used because it is **quick, cost-effective**, and can uncover a broad range of usability problems.
+
+---
+
+### Revised Nielsen's Heuristics (2014)
+
+When evaluating a website, reviewers commonly apply the following 10 heuristics:
+
+1. **Visibility of system status** – Keep users informed about what’s going on (e.g., loading indicators).
+2. **Match between system and real world** – Use familiar language and logical flows.
+3. **User control and freedom** – Provide undo/redo options and avoid trapping users.
+4. **Consistency and standards** – Follow platform/web conventions; don’t surprise users.
+5. **Error prevention** – Minimize the chance of errors with constraints or confirmations.
+6. **Recognition rather than recall** – Reduce memory load by showing options and guides.
+7. **Flexibility and efficiency of use** – Include shortcuts or power features for experienced users.
+8. **Aesthetic and minimalist design** – Keep interfaces clean; remove unnecessary elements.
+9. **Help users recognize, diagnose, and recover from errors** – Clear error messages with solutions.
+10. **Help and documentation** – Provide helpful guidance that is easy to find and follow.
+
+---
+
+### How to Perform a Heuristic Evaluation on a Website
+
+#### 1. **Plan the Evaluation**
+
+* **Define scope**: Which pages or features will be evaluated?
+* **Select heuristics**: Use Nielsen’s or any modified set specific to web or mobile.
+* **Recruit evaluators**: Ideally 3–5 usability experts to uncover most issues.
+* **Set a rating scale**: For instance, 0 (no problem) to 4 (usability catastrophe).
+
+#### 2. **Brief Evaluators**
+
+* Give a short intro and clarify goals.
+* Explain the rating system and heuristics.
+
+#### 3. **Individual Evaluation (1–2 hours)**
+
+* **First pass**: Explore the website freely to get a sense of it.
+* **Second pass**: Systematically go through the interface and evaluate based on each heuristic.
+* Record:
+
+  * Where the issue is
+  * What heuristic it violates
+  * Severity rating
+  * Comments or screenshots
+
+#### 4. **Debriefing Session**
+
+* Review findings as a group.
+* **Prioritize issues** based on severity and impact.
+* Compile into a report with:
+
+  * Summary of findings
+  * List of issues, heuristics violated, severity ratings
+  * Recommendations for improvement
+
+---
+
+### Advantages
+
+* Fast and relatively inexpensive
+* Can be used early in design
+* Does not require user recruitment
+
+### Limitations
+
+* Requires experienced evaluators
+* May miss real-world context issues
+* Tends to uncover many minor issues ("false alarms")
+
+Would you like an example heuristic evaluation write-up for a popular website like Amazon or Canvas?
