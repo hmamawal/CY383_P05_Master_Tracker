@@ -1,0 +1,41 @@
+to run the Master Tracker program, follow these steps:
+
+1. First, make sure your virtual environment is activated (if you're using one)
+
+2. Run the Django development server:
+
+```bash
+python manage.py runserver
+```
+
+3. Open your web browser and navigate to:
+```
+http://127.0.0.1:8000/
+```
+
+This should take you to the home page of your Master Tracker application. If the home page redirects correctly (as implemented in your transformed FitFrenzy application), you should be taken to the task dashboard.
+
+If you need to access specific pages directly:
+
+- Task Dashboard: `http://127.0.0.1:8000/content/tasks/`
+- Login: `http://127.0.0.1:8000/accounts/login/`
+- Register: `http://127.0.0.1:8000/accounts/register/`
+- Admin panel: `http://127.0.0.1:8000/admin/` (requires admin credentials)
+
+For the admin panel, you'll need to create a superuser first if you haven't already:
+
+```bash
+python manage.py createsuperuser
+```
+
+Note: I noticed you had "djlint" selected in your file. If you want to run just the compliance test instead, you can use:
+
+```bash
+python compliance_test.py
+```
+
+or for testing just the report generation:
+
+```bash
+python compliance_test.py --test-only
+```

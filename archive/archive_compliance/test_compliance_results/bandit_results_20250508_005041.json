@@ -1,0 +1,1 @@
+{"results": [{"issue_severity": "HIGH", "issue_confidence": "MEDIUM", "issue_text": "Mock security issue", "filename": "mock_file.py", "line_number": 42}]}

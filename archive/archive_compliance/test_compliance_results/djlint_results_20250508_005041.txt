@@ -1,0 +1,1 @@
+templates/base.html:10:10: H006 HTML attribute should be lowercase

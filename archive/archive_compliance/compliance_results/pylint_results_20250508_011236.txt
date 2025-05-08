@@ -1,0 +1,420 @@
+************* Module content.admin
+content\admin.py:8:0: C0303: Trailing whitespace (trailing-whitespace)
+content\admin.py:13:0: C0303: Trailing whitespace (trailing-whitespace)
+content\admin.py:22:0: C0304: Final newline missing (missing-final-newline)
+content\admin.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\admin.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+content\admin.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+content\admin.py:14:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module content.apps
+content\apps.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\apps.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module content.forms
+content\forms.py:19:0: C0303: Trailing whitespace (trailing-whitespace)
+content\forms.py:26:0: C0303: Trailing whitespace (trailing-whitespace)
+content\forms.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
+content\forms.py:43:0: C0303: Trailing whitespace (trailing-whitespace)
+content\forms.py:61:0: C0301: Line too long (101/100) (line-too-long)
+content\forms.py:72:0: C0303: Trailing whitespace (trailing-whitespace)
+content\forms.py:77:0: C0304: Final newline missing (missing-final-newline)
+content\forms.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\forms.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+content\forms.py:7:4: C0115: Missing class docstring (missing-class-docstring)
+content\forms.py:7:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+content\forms.py:13:4: C0115: Missing class docstring (missing-class-docstring)
+content\forms.py:13:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+content\forms.py:30:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+content\forms.py:37:27: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+content\forms.py:49:27: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+content\forms.py:66:4: C0115: Missing class docstring (missing-class-docstring)
+content\forms.py:66:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+content\forms.py:3:0: C0411: third party import "django.contrib.auth.models.User" should be placed before local import "models.Challenge" (wrong-import-order)
+content\forms.py:4:0: C0411: first party import "accounts.models.UserProfile" should be placed before local import "models.Challenge" (wrong-import-order)
+************* Module content.models
+content\models.py:23:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:32:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:35:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:38:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:41:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:54:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:67:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:74:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:77:0: C0303: Trailing whitespace (trailing-whitespace)
+content\models.py:79:0: C0304: Final newline missing (missing-final-newline)
+content\models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\models.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+content\models.py:13:4: E0307: __str__ does not return str (invalid-str-returned)
+content\models.py:16:0: C0115: Missing class docstring (missing-class-docstring)
+content\models.py:33:4: C0115: Missing class docstring (missing-class-docstring)
+content\models.py:33:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+content\models.py:36:4: E0307: __str__ does not return str (invalid-str-returned)
+content\models.py:39:4: C0116: Missing function or method docstring (missing-function-docstring)
+content\models.py:45:16: E1101: Instance of 'DateTimeField' has no 'date' member (no-member)
+content\models.py:56:24: E1101: Instance of 'ForeignKey' has no 'username' member (no-member)
+content\models.py:56:47: E1101: Instance of 'ForeignKey' has no 'title' member (no-member)
+content\models.py:75:4: C0115: Missing class docstring (missing-class-docstring)
+content\models.py:75:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+content\models.py:79:44: E1101: Instance of 'ForeignKey' has no 'title' member (no-member)
+content\models.py:4:0: C0411: standard import "datetime" should be placed before third party imports "django.db.models", "django.contrib.auth.models.User", "django.utils.timezone" (wrong-import-order)
+content\models.py:4:0: W0611: Unused import datetime (unused-import)
+************* Module content.tests
+content\tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\tests.py:1:0: W0611: Unused TestCase imported from django.test (unused-import)
+************* Module content.urls
+content\urls.py:9:0: C0303: Trailing whitespace (trailing-whitespace)
+content\urls.py:14:0: C0301: Line too long (115/100) (line-too-long)
+content\urls.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module content.views
+content\views.py:36:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:42:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:48:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:59:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:65:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:69:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:78:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:82:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:88:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:98:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:103:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:116:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:119:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:128:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:138:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:140:0: C0301: Line too long (101/100) (line-too-long)
+content\views.py:142:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:157:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:165:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:166:0: C0301: Line too long (114/100) (line-too-long)
+content\views.py:173:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:192:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:198:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:207:0: C0301: Line too long (126/100) (line-too-long)
+content\views.py:210:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:218:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:222:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:238:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:246:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:252:0: C0301: Line too long (109/100) (line-too-long)
+content\views.py:254:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:262:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:269:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:280:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:286:0: C0301: Line too long (116/100) (line-too-long)
+content\views.py:293:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:297:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:300:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:303:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:306:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:309:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:312:0: C0301: Line too long (108/100) (line-too-long)
+content\views.py:314:0: C0303: Trailing whitespace (trailing-whitespace)
+content\views.py:315:0: C0304: Final newline missing (missing-final-newline)
+content\views.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\views.py:15:9: W0613: Unused argument 'request' (unused-argument)
+content\views.py:20:18: W0613: Unused argument 'request' (unused-argument)
+content\views.py:25:21: W0613: Unused argument 'request' (unused-argument)
+content\views.py:25:30: W0613: Unused argument 'challenge_id' (unused-argument)
+content\views.py:34:14: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+content\views.py:40:24: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:41:26: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:44:24: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:57:24: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:58:26: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:67:20: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:77:14: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+content\views.py:92:16: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:115:14: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+content\views.py:131:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+content\views.py:146:32: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:159:16: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:194:20: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:202:15: E1101: Class 'NCOR' has no 'objects' member (no-member)
+content\views.py:204:19: E1101: Class 'NCOR' has no 'objects' member (no-member)
+content\views.py:212:12: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:204:12: W0612: Unused variable 'ncor' (unused-variable)
+content\views.py:233:21: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:241:32: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:248:12: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:257:19: E1101: Class 'Task' has no 'objects' member (no-member)
+content\views.py:272:22: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+content\views.py:275:40: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:282:20: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\views.py:290:0: C0116: Missing function or method docstring (missing-function-docstring)
+content\views.py:295:4: C0415: Import outside toplevel (os) (import-outside-toplevel)
+content\views.py:296:4: C0415: Import outside toplevel (glob) (import-outside-toplevel)
+content\views.py:298:31: E0602: Undefined variable 'settings' (undefined-variable)
+content\views.py:307:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+content\views.py:312:23: E0602: Undefined variable 'datetime' (undefined-variable)
+content\views.py:10:0: C0411: first party import "accounts.models.UserProfile" should be placed before local imports "models.Challenge", "forms.ChallengeForm" (wrong-import-order)
+content\views.py:11:0: C0411: standard import "datetime.timedelta" should be placed before third party imports "django.shortcuts.render", "django.contrib.auth.decorators.login_required", "django.utils.timezone" (...) "django.http.JsonResponse", "django.contrib.auth.models.User", "django.db.models.Q", first party import "accounts.models.UserProfile", and local imports "models.Challenge", "forms.ChallengeForm" (wrong-import-order)
+content\views.py:7:0: W0611: Unused Q imported from django.db.models (unused-import)
+content\views.py:8:0: W0611: Unused Challenge imported from models (unused-import)
+content\views.py:9:0: W0611: Unused ChallengeForm imported from forms (unused-import)
+************* Module content.management.__init__
+content\management\__init__.py:1:0: C0304: Final newline missing (missing-final-newline)
+************* Module content.management.commands.check_deadlines
+content\management\commands\check_deadlines.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:22:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:29:0: C0301: Line too long (107/100) (line-too-long)
+content\management\commands\check_deadlines.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:37:0: C0301: Line too long (113/100) (line-too-long)
+content\management\commands\check_deadlines.py:39:0: C0301: Line too long (131/100) (line-too-long)
+content\management\commands\check_deadlines.py:40:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:48:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:55:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:65:0: C0301: Line too long (115/100) (line-too-long)
+content\management\commands\check_deadlines.py:67:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:73:0: C0301: Line too long (120/100) (line-too-long)
+content\management\commands\check_deadlines.py:75:0: C0301: Line too long (125/100) (line-too-long)
+content\management\commands\check_deadlines.py:76:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\check_deadlines.py:77:0: C0304: Final newline missing (missing-final-newline)
+content\management\commands\check_deadlines.py:77:0: C0301: Line too long (105/100) (line-too-long)
+content\management\commands\check_deadlines.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\management\commands\check_deadlines.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+content\management\commands\check_deadlines.py:15:25: E1101: Class 'Task' has no 'objects' member (no-member)
+content\management\commands\check_deadlines.py:25:36: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\management\commands\check_deadlines.py:33:16: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\management\commands\check_deadlines.py:39:34: E1101: Instance of 'Style' has no 'SUCCESS' member (no-member)
+content\management\commands\check_deadlines.py:43:23: E1101: Class 'Task' has no 'objects' member (no-member)
+content\management\commands\check_deadlines.py:58:26: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+content\management\commands\check_deadlines.py:61:44: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\management\commands\check_deadlines.py:69:24: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\management\commands\check_deadlines.py:75:42: E1101: Instance of 'Style' has no 'SUCCESS' member (no-member)
+content\management\commands\check_deadlines.py:77:26: E1101: Instance of 'Style' has no 'SUCCESS' member (no-member)
+content\management\commands\check_deadlines.py:5:0: C0411: third party import "django.contrib.auth.models.User" should be placed before first party import "content.models.Task"  (wrong-import-order)
+content\management\commands\check_deadlines.py:7:0: C0411: standard import "datetime.timedelta" should be placed before third party imports "django.core.management.base.BaseCommand", "django.utils.timezone", "django.db.models.Q", "django.contrib.auth.models.User" and first party imports "content.models.Task", "accounts.models.UserProfile"  (wrong-import-order)
+content\management\commands\check_deadlines.py:5:0: C0412: Imports from package django are not grouped (ungrouped-imports)
+content\management\commands\check_deadlines.py:3:0: W0611: Unused Q imported from django.db.models (unused-import)
+content\management\commands\check_deadlines.py:5:0: W0611: Unused User imported from django.contrib.auth.models (unused-import)
+************* Module content.management.commands.generate_ncors
+content\management\commands\generate_ncors.py:15:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\generate_ncors.py:17:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\generate_ncors.py:26:0: C0301: Line too long (130/100) (line-too-long)
+content\management\commands\generate_ncors.py:29:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\generate_ncors.py:37:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\generate_ncors.py:41:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\generate_ncors.py:43:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\generate_ncors.py:53:0: C0303: Trailing whitespace (trailing-whitespace)
+content\management\commands\generate_ncors.py:54:0: C0304: Final newline missing (missing-final-newline)
+content\management\commands\generate_ncors.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\management\commands\generate_ncors.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+content\management\commands\generate_ncors.py:11:24: E1101: Class 'Task' has no 'objects' member (no-member)
+content\management\commands\generate_ncors.py:21:19: E1101: Class 'NCOR' has no 'objects' member (no-member)
+content\management\commands\generate_ncors.py:23:23: E1101: Class 'NCOR' has no 'objects' member (no-member)
+content\management\commands\generate_ncors.py:31:16: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\management\commands\generate_ncors.py:47:20: E1101: Class 'Notification' has no 'objects' member (no-member)
+content\management\commands\generate_ncors.py:54:26: E1101: Instance of 'Style' has no 'SUCCESS' member (no-member)
+content\management\commands\generate_ncors.py:23:16: W0612: Unused variable 'ncor' (unused-variable)
+content\management\commands\generate_ncors.py:4:0: C0411: third party import "django.contrib.auth.models.User" should be placed before first party import "content.models.Task"  (wrong-import-order)
+content\management\commands\generate_ncors.py:4:0: C0412: Imports from package django are not grouped (ungrouped-imports)
+************* Module content.management.commands.__init__
+content\management\commands\__init__.py:1:0: C0304: Final newline missing (missing-final-newline)
+************* Module content.migrations.0001_initial
+content\migrations\0001_initial.py:19:0: C0301: Line too long (117/100) (line-too-long)
+content\migrations\0001_initial.py:24:0: C0301: Line too long (138/100) (line-too-long)
+content\migrations\0001_initial.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\migrations\0001_initial.py:1:0: C0103: Module name "0001_initial" doesn't conform to snake_case naming style (invalid-name)
+content\migrations\0001_initial.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module content.migrations.0002_task_notification_ncor
+content\migrations\0002_task_notification_ncor.py:19:0: C0301: Line too long (117/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:24:0: C0301: Line too long (165/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:26:0: C0301: Line too long (153/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:27:0: C0301: Line too long (151/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:36:0: C0301: Line too long (117/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:37:0: C0301: Line too long (244/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:41:0: C0301: Line too long (148/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:42:0: C0301: Line too long (138/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:51:0: C0301: Line too long (117/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:53:0: C0301: Line too long (111/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:54:0: C0301: Line too long (140/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:55:0: C0301: Line too long (130/100) (line-too-long)
+content\migrations\0002_task_notification_ncor.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+content\migrations\0002_task_notification_ncor.py:1:0: C0103: Module name "0002_task_notification_ncor" doesn't conform to snake_case naming style (invalid-name)
+content\migrations\0002_task_notification_ncor.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module accounts.admin
+accounts\admin.py:16:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\admin.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\admin.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\admin.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+accounts\admin.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+accounts\admin.py:17:4: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\admin.py:21:4: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\admin.py:3:0: C0411: third party import "django.contrib.auth.admin.UserAdmin" should be placed before local import "models.UserProfile" (wrong-import-order)
+accounts\admin.py:4:0: C0411: third party import "django.contrib.auth.models.User" should be placed before local import "models.UserProfile" (wrong-import-order)
+************* Module accounts.apps
+accounts\apps.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\apps.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module accounts.forms
+accounts\forms.py:10:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\forms.py:24:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\forms.py:28:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\forms.py:31:0: C0304: Final newline missing (missing-final-newline)
+accounts\forms.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\forms.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+accounts\forms.py:6:0: R0901: Too many ancestors (9/7) (too-many-ancestors)
+accounts\forms.py:11:4: C0115: Missing class docstring (missing-class-docstring)
+accounts\forms.py:11:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+accounts\forms.py:15:0: C0115: Missing class docstring (missing-class-docstring)
+accounts\forms.py:16:4: C0115: Missing class docstring (missing-class-docstring)
+accounts\forms.py:16:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+accounts\forms.py:27:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+************* Module accounts.models
+accounts\models.py:13:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\models.py:19:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\models.py:22:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\models.py:26:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\models.py:21:18: E1101: Instance of 'OneToOneField' has no 'username' member (no-member)
+accounts\models.py:24:4: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\models.py:28:4: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\models.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\models.py:38:11: E1101: Class 'User' has no 'profile' member (no-member)
+accounts\models.py:40:8: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+accounts\models.py:33:24: W0613: Unused argument 'sender' (unused-argument)
+accounts\models.py:33:42: W0613: Unused argument 'created' (unused-argument)
+accounts\models.py:33:0: W0613: Unused argument 'kwargs' (unused-argument)
+accounts\models.py:43:0: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\models.py:46:11: E1101: Class 'User' has no 'profile' member (no-member)
+accounts\models.py:48:8: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+accounts\models.py:43:22: W0613: Unused argument 'sender' (unused-argument)
+accounts\models.py:43:0: W0613: Unused argument 'kwargs' (unused-argument)
+************* Module accounts.tests
+accounts\tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\tests.py:1:0: W0611: Unused TestCase imported from django.test (unused-import)
+************* Module accounts.urls
+accounts\urls.py:7:0: C0304: Final newline missing (missing-final-newline)
+accounts\urls.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\urls.py:1:0: F0002: accounts\urls.py: Fatal error while checking 'accounts\urls.py'. Please open an issue in our bug tracker so we address this. There is a pre-filled template that you can use in 'C:\Users\hunter.mamawal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\Local\pylint\pylint\Cache\pylint-crash-2025-05-08-01-16-46.txt'. (astroid-error)
+************* Module accounts.views
+accounts\views.py:22:0: C0301: Line too long (102/100) (line-too-long)
+accounts\views.py:29:0: C0303: Trailing whitespace (trailing-whitespace)
+accounts\views.py:33:0: C0304: Final newline missing (missing-final-newline)
+accounts\views.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\views.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\views.py:20:0: C0116: Missing function or method docstring (missing-function-docstring)
+accounts\views.py:1:0: C0411: third party import "django.shortcuts.render" should be placed before local import "views.register" (wrong-import-order)
+accounts\views.py:2:0: C0411: third party import "django.contrib.auth.forms.UserCreationForm" should be placed before local import "views.register" (wrong-import-order)
+accounts\views.py:3:0: C0411: third party import "django.contrib.auth.decorators.login_required" should be placed before local import "views.register" (wrong-import-order)
+accounts\views.py:4:0: C0411: third party import "django.contrib.messages" should be placed before local import "views.register" (wrong-import-order)
+accounts\views.py:2:0: W0611: Unused UserCreationForm imported from django.contrib.auth.forms (unused-import)
+************* Module accounts.migrations.0001_initial
+accounts\migrations\0001_initial.py:20:0: C0301: Line too long (117/100) (line-too-long)
+accounts\migrations\0001_initial.py:21:0: C0301: Line too long (162/100) (line-too-long)
+accounts\migrations\0001_initial.py:25:0: C0301: Line too long (145/100) (line-too-long)
+accounts\migrations\0001_initial.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+accounts\migrations\0001_initial.py:1:0: C0103: Module name "0001_initial" doesn't conform to snake_case naming style (invalid-name)
+accounts\migrations\0001_initial.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module FitFrenzy
+FitFrenzy\__init__.py:1:0: C0103: Module name "FitFrenzy" doesn't conform to snake_case naming style (invalid-name)
+************* Module FitFrenzy.wsgi
+FitFrenzy\wsgi.py:1:0: R0801: Similar lines in 2 files
+==content.management.commands.check_deadlines:[41:63]
+==content.views:[255:277]
+    xo_threshold = timezone.now() + timedelta(hours=24)
+    urgent_tasks = Task.objects.filter(
+        status='PENDING',
+        due_date__lte=xo_threshold,
+        due_date__gt=timezone.now()
+    )
+
+    # Group tasks by platoon
+    platoon_tasks = {}
+    for task in urgent_tasks:
+        if task.platoon not in platoon_tasks:
+            platoon_tasks[task.platoon] = []
+        platoon_tasks[task.platoon].append(task)
+
+    # Notify XOs about tasks in their platoon
+    for platoon, tasks in platoon_tasks.items():
+        xo_profiles = UserProfile.objects.filter(role='XO', platoon=platoon)
+        for profile in xo_profiles:
+            for task in tasks:
+                existing_notification = Notification.objects.filter(
+                    user=profile.user,
+                    task=task, (duplicate-code)
+FitFrenzy\wsgi.py:1:0: R0801: Similar lines in 2 files
+==content.management.commands.generate_ncors:[17:41]
+==content.views:[198:222]
+    ncor_count = 0
+    for task in overdue_tasks:
+        # Check if NCOR already exists
+        if not NCOR.objects.filter(task=task, user=task.assignee).exists():
+            # Create NCOR
+            ncor = NCOR.objects.create(
+                task=task,
+                user=task.assignee,
+                description=f"Failed to complete '{task.title}' by the deadline ({task.due_date.strftime('%Y-%m-%d %H:%M')})."
+            )
+            ncor_count += 1
+
+            # Create notification for the cadet
+            Notification.objects.create(
+                user=task.assignee,
+                task=task,
+                notification_type='NCOR',
+                message=f"An NCOR has been generated for your overdue task: {task.title}"
+            )
+
+            # Update task status
+            task.status = 'OVERDUE'
+            task.save()
+ (duplicate-code)
+FitFrenzy\wsgi.py:1:0: R0801: Similar lines in 2 files
+==content.management.commands.check_deadlines:[65:74]
+==content.views:[278:290]
+                    ).exists()
+
+                    if not existing_notification:
+                        Notification.objects.create(
+                            user=profile.user,
+                            task=task,
+                            notification_type='DEADLINE',
+                            message=f"XO Alert: Task '{task.title}' for {task.assignee.username} is due within 24 hours"
+                        ) (duplicate-code)
+FitFrenzy\wsgi.py:1:0: R0801: Similar lines in 2 files
+==content.management.commands.check_deadlines:[29:38]
+==content.views:[244:255]
+            ).exists()
+
+            if not existing_notification:
+                Notification.objects.create(
+                    user=task.assignee,
+                    task=task,
+                    notification_type='DEADLINE',
+                    message=f"Reminder: Task '{task.title}' is due on {task.due_date.strftime('%Y-%m-%d %H:%M')}"
+                ) (duplicate-code)
+FitFrenzy\wsgi.py:1:0: R0801: Similar lines in 2 files
+==accounts.migrations.0001_initial:[7:17]
+==content.migrations.0001_initial:[6:16]
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+    ]
+
+    operations = [
+        migrations.CreateModel( (duplicate-code)
+FitFrenzy\wsgi.py:1:0: R0801: Similar lines in 2 files
+==content.management.commands.check_deadlines:[13:20]
+==content.views:[231:238]
+    deadline_threshold = timezone.now() + timedelta(hours=48)
+    upcoming_tasks = Task.objects.filter(
+        status='PENDING',
+        due_date__lte=deadline_threshold,
+        due_date__gt=timezone.now()
+    )
+ (duplicate-code)
+FitFrenzy\wsgi.py:1:0: R0801: Similar lines in 2 files
+==content.management.commands.generate_ncors:[44:49]
+==content.views:[89:94]
+            xo_users = User.objects.filter(profile__role='XO', profile__platoon=task.platoon)
+            for xo in xo_users:
+                Notification.objects.create(
+                    user=xo,
+                    task=task, (duplicate-code)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

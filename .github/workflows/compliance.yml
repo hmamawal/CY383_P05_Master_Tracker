@@ -1,0 +1,29 @@
+name: Compliance Testing
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  compliance:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install bandit djlint pylint flake8 safety coverage
+    - name: Run compliance tests
+      run: python compliance_test.py
+    - name: Upload compliance results
+      uses: actions/upload-artifact@v2
+      with:
+        name: compliance-results
+        path: compliance_results/

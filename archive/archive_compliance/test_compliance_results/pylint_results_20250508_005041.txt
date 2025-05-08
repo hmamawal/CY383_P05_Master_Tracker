@@ -1,0 +1,2 @@
+mock_file.py:25: E0001 Syntax error
+Your code has been rated at 7.50/10

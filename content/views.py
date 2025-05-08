@@ -285,3 +285,31 @@ def check_upcoming_deadlines():
                         notification_type='DEADLINE',
                         message=f"XO Alert: Task '{task.title}' for {task.assignee.username} is due within 24 hours"
                     )
+
+@login_required
+def compliance_dashboard(request):
+    if not request.user.profile.is_admin:
+        return HttpResponseForbidden("You don't have permission to access this page")
+    
+    # Path to the latest compliance report
+    import os
+    import glob
+    
+    results_dir = os.path.join(settings.BASE_DIR, "compliance_results")
+    report_files = glob.glob(os.path.join(results_dir, "compliance_summary_*.html"))
+    
+    if not report_files:
+        return render(request, 'compliance/no_reports.html')
+    
+    # Get the latest report
+    latest_report = max(report_files, key=os.path.getctime)
+    
+    with open(latest_report, 'r') as f:
+        report_content = f.read()
+    
+    context = {
+        'report_content': report_content,
+        'report_date': datetime.fromtimestamp(os.path.getctime(latest_report)).strftime("%Y-%m-%d %H:%M:%S")
+    }
+    
+    return render(request, 'compliance/dashboard.html', context)

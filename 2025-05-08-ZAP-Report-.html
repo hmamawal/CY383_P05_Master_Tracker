@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAP by Checkmarx Scanning Report</title>
+<link
+	href="2025-05-08-ZAP-Report-/normalize/normalize.css" rel="stylesheet">
+<link
+	href="2025-05-08-ZAP-Report-/themes/original/main.css" rel="stylesheet">
+<link
+	href="2025-05-08-ZAP-Report-/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>ZAP by Checkmarx Scanning Report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="2025-05-08-ZAP-Report-/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on Thu 8 May 2025, at 01:15:55</span>
+		</p>
+		<p>ZAP Version: 2.16.1</p>
+		<p>
+			ZAP by <a href="https://checkmarx.com/">Checkmarx</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(3)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://127.0.0.1:8000</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(11.1%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(11.1%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(11.1%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(33.3%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(44.4%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(22.2%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(11.1%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(11.1%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(44.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(44.4%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(44.4%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(11.1%)</span></td>
+							<td><span>9</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span
+									class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span
+									class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span
+									class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">http://127.0.0.1:8000</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(5)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(9)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>13</span><br> <span
+								class="additional-info-percentages">(144.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Cookie No HttpOnly Flag</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>10</span><br> <span
+								class="additional-info-percentages">(111.1%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Cross-Domain JavaScript Source File Inclusion</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>21</span><br> <span
+								class="additional-info-percentages">(233.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>23</span><br> <span
+								class="additional-info-percentages">(255.6%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>8</span><br> <span
+								class="additional-info-percentages">(88.9%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Authentication Request Identified</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(33.3%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">Session Management Response Identified</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(122.2%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">User Agent Fuzzer</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>24</span><br> <span
+								class="additional-info-percentages">(266.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">User Controllable HTML Element Attribute (Potential XSS)</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>25</span><br> <span
+								class="additional-info-percentages">(277.8%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>9</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/robots.txt</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (239 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/robots.txt HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (291 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Thu, 08 May 2025 05:13:18 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+X-Frame-Options: DENY
+Content-Length: 2663
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2663 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;Page not found at /robots.txt&lt;/title&gt;
+  &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot;&gt;
+  &lt;style&gt;
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font-family: sans-serif; background:#eee; color:#000; }
+    body &gt; :where(header, main, footer) { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 small { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header id=&quot;summary&quot;&gt;
+    &lt;h1&gt;Page not found &lt;small&gt;(404)&lt;/small&gt;&lt;/h1&gt;
+    
+    &lt;table class=&quot;meta&quot;&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;Request Method:&lt;/th&gt;
+        &lt;td&gt;GET&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;Request URL:&lt;/th&gt;
+        &lt;td&gt;http://127.0.0.1:8000/robots.txt&lt;/td&gt;
+      &lt;/tr&gt;
+      
+    &lt;/table&gt;
+  &lt;/header&gt;
+
+  &lt;main id=&quot;info&quot;&gt;
+    
+      &lt;p&gt;
+      Using the URLconf defined in &lt;code&gt;FitFrenzy.urls&lt;/code&gt;,
+      Django tried these URL patterns, in this order:
+      &lt;/p&gt;
+      &lt;ol&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                content/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                accounts/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                accounts/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                admin/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+      &lt;/ol&gt;
+      &lt;p&gt;
+        
+          The current path, &lt;code&gt;robots.txt&lt;/code&gt;,
+        
+        didn’t match any of these.
+      &lt;/p&gt;
+    
+  &lt;/main&gt;
+
+  &lt;footer id=&quot;explanation&quot;&gt;
+    &lt;p&gt;
+      You’re seeing this error because you have &lt;code&gt;DEBUG = True&lt;/code&gt; in
+      your Django settings file. Change that to &lt;code&gt;False&lt;/code&gt;, and Django
+      will display a standard 404 page.
+    &lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/robots.txt</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server">WSTG-v42-INFO-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/497.html">CWE-497</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The web/application server is leaking version information via the &quot;Server&quot; HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (239 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/robots.txt HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (291 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Thu, 08 May 2025 05:13:18 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+X-Frame-Options: DENY
+Content-Length: 2663
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2663 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;title&gt;Page not found at /robots.txt&lt;/title&gt;
+  &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot;&gt;
+  &lt;style&gt;
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font-family: sans-serif; background:#eee; color:#000; }
+    body &gt; :where(header, main, footer) { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 small { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header id=&quot;summary&quot;&gt;
+    &lt;h1&gt;Page not found &lt;small&gt;(404)&lt;/small&gt;&lt;/h1&gt;
+    
+    &lt;table class=&quot;meta&quot;&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;Request Method:&lt;/th&gt;
+        &lt;td&gt;GET&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;Request URL:&lt;/th&gt;
+        &lt;td&gt;http://127.0.0.1:8000/robots.txt&lt;/td&gt;
+      &lt;/tr&gt;
+      
+    &lt;/table&gt;
+  &lt;/header&gt;
+
+  &lt;main id=&quot;info&quot;&gt;
+    
+      &lt;p&gt;
+      Using the URLconf defined in &lt;code&gt;FitFrenzy.urls&lt;/code&gt;,
+      Django tried these URL patterns, in this order:
+      &lt;/p&gt;
+      &lt;ol&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                content/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                accounts/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                accounts/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+          &lt;li&gt;
+            
+              &lt;code&gt;
+                admin/
+                
+              &lt;/code&gt;
+            
+          &lt;/li&gt;
+        
+      &lt;/ol&gt;
+      &lt;p&gt;
+        
+          The current path, &lt;code&gt;robots.txt&lt;/code&gt;,
+        
+        didn’t match any of these.
+      &lt;/p&gt;
+    
+  &lt;/main&gt;
+
+  &lt;footer id=&quot;explanation&quot;&gt;
+    &lt;p&gt;
+      You’re seeing this error because you have &lt;code&gt;DEBUG = True&lt;/code&gt; in
+      your Django settings file. Change that to &lt;code&gt;False&lt;/code&gt;, and Django
+      will display a standard 404 page.
+    &lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>WSGIServer/0.2 CPython/3.13.3</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the &quot;Server&quot; header or provide generic details.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(3)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8000</span> <span>(3)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Cookie No HttpOnly Flag</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/accounts/login/?next=/content/tasks/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1004.html">CWE-1004</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (312 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/accounts/login/?next=/content/tasks/ HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://127.0.0.1:8000/content/tasks/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (545 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 08 May 2025 05:13:18 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+Expires: Thu, 08 May 2025 05:13:18 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+Vary: Cookie
+X-Frame-Options: DENY
+Content-Length: 5808
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Set-Cookie: csrftoken=rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi; expires=Thu, 07 May 2026 05:13:18 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (5808 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;West Point Master Tracker&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot;&gt;
+    &lt;!-- Add any additional styles or libraries here --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;d-flex flex-column min-vh-100&quot;&gt;
+        &lt;nav class=&quot;navbar navbar-expand-lg custom-navbar&quot;&gt;
+            &lt;!-- Your navigation bar content here --&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;navbar-brand text-white&quot; href=&quot;/content/tasks/&quot;&gt;West Point Master Tracker&lt;/a&gt;
+                &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                
+                &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+                    &lt;ul class=&quot;navbar-nav&quot;&gt;
+                        &lt;!-- Add more navigation links here as needed --&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/content/tasks/&quot;&gt;Dashboard&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                        
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/register/&quot;&gt;Register&lt;/a&gt;
+                        &lt;/li&gt;
+
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/login/&quot;&gt;Login&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;div class=&quot;container mt-4 flex-grow-1&quot;&gt;
+            
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row justify-content-center&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;card shadow&quot;&gt;
+                
+                    &lt;div class=&quot;card-body justify-content-center&quot;&gt;
+                        &lt;h2 class=&quot;card-title text-center mb-4&quot;&gt;Account Login&lt;/h2&gt;
+                            &lt;form method=&quot;post&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; name=&quot;csrfmiddlewaretoken&quot; value=&quot;tjx5EjaJBUxdATwdc0057bBBGHZ5jai2Kk6gVL8igfaE5kHrdXMTvQid9xUJbz5a&quot;&gt;
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Username
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;text&quot; name=&quot;username&quot; autofocus autocapitalize=&quot;none&quot; autocomplete=&quot;username&quot; maxlength=&quot;150&quot; required id=&quot;id_username&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Password
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;current-password&quot; required id=&quot;id_password&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+                                
+
+                                &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block&quot;&gt;Sign In&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;div class=&quot;mt-3 text-center&quot;&gt;
+                            &lt;p&gt;Do not have an account? &lt;a href=&quot;/accounts/register/&quot;&gt;Register here&lt;/a&gt;&lt;/p&gt;
+                            &lt;p&gt;Forgot your password? &lt;a href=&quot;/accounts/password_reset/&quot;&gt;Reset Password&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    /* Custom CSS for field alignment */   
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Optional: Increase spacing between form groups for visual separation */
+    .mt-3 {
+        margin-top: 20px;
+    }
+&lt;/style&gt;
+
+
+        &lt;/div&gt;
+
+        &lt;footer class=&quot;bg-dark text-white text-center py-3&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;p&gt;&amp;copy; 2025 West Point Master Tracker &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bootstrap and other scripts here --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+        /* Define your custom CSS here */
+        .custom-navbar {
+            background-color: #00205B; /* West Point Navy Blue */
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .custom-nav-link {
+            font-weight: bold;
+            font-style: italic;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3px 6px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>csrftoken</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: csrftoken</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the HttpOnly flag is set for all cookies.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Cross-Domain JavaScript Source File Inclusion</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/accounts/login/?next=/content/tasks/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/">OWASP_2021_A08</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/829.html">CWE-829</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The page includes one or more script files from a third-party domain.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (312 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/accounts/login/?next=/content/tasks/ HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://127.0.0.1:8000/content/tasks/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (545 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 08 May 2025 05:13:18 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+Expires: Thu, 08 May 2025 05:13:18 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+Vary: Cookie
+X-Frame-Options: DENY
+Content-Length: 5808
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Set-Cookie: csrftoken=rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi; expires=Thu, 07 May 2026 05:13:18 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (5808 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;West Point Master Tracker&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot;&gt;
+    &lt;!-- Add any additional styles or libraries here --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;d-flex flex-column min-vh-100&quot;&gt;
+        &lt;nav class=&quot;navbar navbar-expand-lg custom-navbar&quot;&gt;
+            &lt;!-- Your navigation bar content here --&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;navbar-brand text-white&quot; href=&quot;/content/tasks/&quot;&gt;West Point Master Tracker&lt;/a&gt;
+                &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                
+                &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+                    &lt;ul class=&quot;navbar-nav&quot;&gt;
+                        &lt;!-- Add more navigation links here as needed --&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/content/tasks/&quot;&gt;Dashboard&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                        
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/register/&quot;&gt;Register&lt;/a&gt;
+                        &lt;/li&gt;
+
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/login/&quot;&gt;Login&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;div class=&quot;container mt-4 flex-grow-1&quot;&gt;
+            
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row justify-content-center&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;card shadow&quot;&gt;
+                
+                    &lt;div class=&quot;card-body justify-content-center&quot;&gt;
+                        &lt;h2 class=&quot;card-title text-center mb-4&quot;&gt;Account Login&lt;/h2&gt;
+                            &lt;form method=&quot;post&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; name=&quot;csrfmiddlewaretoken&quot; value=&quot;tjx5EjaJBUxdATwdc0057bBBGHZ5jai2Kk6gVL8igfaE5kHrdXMTvQid9xUJbz5a&quot;&gt;
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Username
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;text&quot; name=&quot;username&quot; autofocus autocapitalize=&quot;none&quot; autocomplete=&quot;username&quot; maxlength=&quot;150&quot; required id=&quot;id_username&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Password
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;current-password&quot; required id=&quot;id_password&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+                                
+
+                                &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block&quot;&gt;Sign In&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;div class=&quot;mt-3 text-center&quot;&gt;
+                            &lt;p&gt;Do not have an account? &lt;a href=&quot;/accounts/register/&quot;&gt;Register here&lt;/a&gt;&lt;/p&gt;
+                            &lt;p&gt;Forgot your password? &lt;a href=&quot;/accounts/password_reset/&quot;&gt;Reset Password&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    /* Custom CSS for field alignment */   
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Optional: Increase spacing between form groups for visual separation */
+    .mt-3 {
+        margin-top: 20px;
+    }
+&lt;/style&gt;
+
+
+        &lt;/div&gt;
+
+        &lt;footer class=&quot;bg-dark text-white text-center py-3&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;p&gt;&amp;copy; 2025 West Point Master Tracker &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bootstrap and other scripts here --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+        /* Define your custom CSS here */
+        .custom-navbar {
+            background-color: #00205B; /* West Point Navy Blue */
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .custom-nav-link {
+            font-weight: bold;
+            font-style: italic;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3px 6px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>https://code.jquery.com/jquery-3.5.1.slim.min.js</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can&#39;t be controlled by end users of the application.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/static/admin/css/dark_mode.css</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (368 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/static/admin/css/dark_mode.css HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://127.0.0.1:8000/accounts/password_reset/
+Cookie: csrftoken=rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (242 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 08 May 2025 05:13:19 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/css
+Content-Length: 2808
+Content-Disposition: inline; filename=&quot;dark_mode.css&quot;
+Last-Modified: Wed, 30 Apr 2025 03:05:10 GMT
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2808 bytes)</summary>
+				
+				<pre><code>@media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #264b5d;
+      --primary-fg: #f7f7f7;
+  
+      --body-fg: #eeeeee;
+      --body-bg: #121212;
+      --body-quiet-color: #d0d0d0;
+      --body-medium-color: #e0e0e0;
+      --body-loud-color: #ffffff;
+  
+      --breadcrumbs-link-fg: #e0e0e0;
+      --breadcrumbs-bg: var(--primary);
+  
+      --link-fg: #81d4fa;
+      --link-hover-color: #4ac1f7;
+      --link-selected-fg: #6f94c6;
+  
+      --hairline-color: #272727;
+      --border-color: #353535;
+  
+      --error-fg: #e35f5f;
+      --message-success-bg: #006b1b;
+      --message-warning-bg: #583305;
+      --message-error-bg: #570808;
+  
+      --darkened-bg: #212121;
+      --selected-bg: #1b1b1b;
+      --selected-row: #00363a;
+  
+      --close-button-bg: #333333;
+      --close-button-hover-bg: #666666;
+
+      color-scheme: dark;
+    }
+  }
+
+
+html[data-theme=&quot;dark&quot;] {
+    --primary: #264b5d;
+    --primary-fg: #f7f7f7;
+
+    --body-fg: #eeeeee;
+    --body-bg: #121212;
+    --body-quiet-color: #d0d0d0;
+    --body-medium-color: #e0e0e0;
+    --body-loud-color: #ffffff;
+
+    --breadcrumbs-link-fg: #e0e0e0;
+    --breadcrumbs-bg: var(--primary);
+
+    --link-fg: #81d4fa;
+    --link-hover-color: #4ac1f7;
+    --link-selected-fg: #6f94c6;
+
+    --hairline-color: #272727;
+    --border-color: #353535;
+
+    --error-fg: #e35f5f;
+    --message-success-bg: #006b1b;
+    --message-warning-bg: #583305;
+    --message-error-bg: #570808;
+
+    --darkened-bg: #212121;
+    --selected-bg: #1b1b1b;
+    --selected-row: #00363a;
+
+    --close-button-bg: #333333;
+    --close-button-hover-bg: #666666;
+
+    color-scheme: dark;
+}
+
+/* THEME SWITCH */
+.theme-toggle {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: transparent;
+    vertical-align: middle;
+    margin-inline-start: 5px;
+    margin-top: -1px;
+}
+
+.theme-toggle svg {
+    vertical-align: middle;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: none;
+}
+
+/*
+Fully hide screen reader text so we only show the one matching the current
+theme.
+*/
+.theme-toggle .visually-hidden {
+    display: none;
+}
+
+html[data-theme=&quot;auto&quot;] .theme-toggle .theme-label-when-auto {
+    display: block;
+}
+
+html[data-theme=&quot;dark&quot;] .theme-toggle .theme-label-when-dark {
+    display: block;
+}
+
+html[data-theme=&quot;light&quot;] .theme-toggle .theme-label-when-light {
+    display: block;
+}
+
+/* ICONS */
+.theme-toggle svg.theme-icon-when-auto,
+.theme-toggle svg.theme-icon-when-dark,
+.theme-toggle svg.theme-icon-when-light {
+    fill: var(--header-link-color);
+    color: var(--header-bg);
+}
+
+html[data-theme=&quot;auto&quot;] .theme-toggle svg.theme-icon-when-auto {
+    display: block;
+}
+
+html[data-theme=&quot;dark&quot;] .theme-toggle svg.theme-icon-when-dark {
+    display: block;
+}
+
+html[data-theme=&quot;light&quot;] .theme-toggle svg.theme-icon-when-light {
+    display: block;
+}
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-content-type-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-0-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8000</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Authentication Request Identified</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST http://127.0.0.1:8000/accounts/login/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The given request has been identified as an authentication request. The &#39;Other Info&#39; field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to &quot;Auto-Detect&quot; then this rule will change the authentication to match the request identified.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>userParam=username</p>
+
+<p>userValue=ZAP</p>
+
+<p>passwordParam=password</p>
+
+<p>referer=http://127.0.0.1:8000/accounts/login/</p>
+
+<p>csrfToken=csrfmiddlewaretoken</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (415 bytes)</summary>
+				
+				<pre><code>POST http://127.0.0.1:8000/accounts/login/ HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: http://127.0.0.1:8000/accounts/login/
+content-length: 110
+Cookie: csrftoken=rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (110 bytes)</summary>
+				
+				<pre><code>csrfmiddlewaretoken=OUdHuavuDxHsdN9itDnjf6r9rP1APpQi5VMSLCt3iSkTIekwuA97DL8LUFWeHODq&amp;username=ZAP&amp;password=ZAP</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (545 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 08 May 2025 05:13:20 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+Expires: Thu, 08 May 2025 05:13:20 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+Vary: Cookie
+X-Frame-Options: DENY
+Content-Length: 5998
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Set-Cookie: csrftoken=rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi; expires=Thu, 07 May 2026 05:13:20 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (5998 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;West Point Master Tracker&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot;&gt;
+    &lt;!-- Add any additional styles or libraries here --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;d-flex flex-column min-vh-100&quot;&gt;
+        &lt;nav class=&quot;navbar navbar-expand-lg custom-navbar&quot;&gt;
+            &lt;!-- Your navigation bar content here --&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;navbar-brand text-white&quot; href=&quot;/content/tasks/&quot;&gt;West Point Master Tracker&lt;/a&gt;
+                &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                
+                &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+                    &lt;ul class=&quot;navbar-nav&quot;&gt;
+                        &lt;!-- Add more navigation links here as needed --&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/content/tasks/&quot;&gt;Dashboard&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                        
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/register/&quot;&gt;Register&lt;/a&gt;
+                        &lt;/li&gt;
+
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/login/&quot;&gt;Login&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;div class=&quot;container mt-4 flex-grow-1&quot;&gt;
+            
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row justify-content-center&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;card shadow&quot;&gt;
+                
+                    &lt;div class=&quot;card-body justify-content-center&quot;&gt;
+                        &lt;h2 class=&quot;card-title text-center mb-4&quot;&gt;Account Login&lt;/h2&gt;
+                            &lt;form method=&quot;post&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; name=&quot;csrfmiddlewaretoken&quot; value=&quot;frr3BxZQojrlhvsem1YRKwvCXCgJlLGOws0eSZXp3E4MMWDsnYKF8bceqsbndatW&quot;&gt;
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Username
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;ZAP&quot; autofocus autocapitalize=&quot;none&quot; autocomplete=&quot;username&quot; maxlength=&quot;150&quot; required id=&quot;id_username&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Password
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;current-password&quot; required id=&quot;id_password&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+                                &lt;ul class=&quot;errorlist&quot;&gt;&lt;li&gt;__all__&lt;ul class=&quot;errorlist nonfield&quot;&gt;&lt;li&gt;Please enter a correct username and password. Note that both fields may be case-sensitive.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
+
+                                &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block&quot;&gt;Sign In&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;div class=&quot;mt-3 text-center&quot;&gt;
+                            &lt;p&gt;Do not have an account? &lt;a href=&quot;/accounts/register/&quot;&gt;Register here&lt;/a&gt;&lt;/p&gt;
+                            &lt;p&gt;Forgot your password? &lt;a href=&quot;/accounts/password_reset/&quot;&gt;Reset Password&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    /* Custom CSS for field alignment */   
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Optional: Increase spacing between form groups for visual separation */
+    .mt-3 {
+        margin-top: 20px;
+    }
+&lt;/style&gt;
+
+
+        &lt;/div&gt;
+
+        &lt;footer class=&quot;bg-dark text-white text-center py-3&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;p&gt;&amp;copy; 2025 West Point Master Tracker &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bootstrap and other scripts here --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+        /* Define your custom CSS here */
+        .custom-navbar {
+            background-color: #00205B; /* West Point Navy Blue */
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .custom-nav-link {
+            font-weight: bold;
+            font-style: italic;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3px 6px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>username</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>password</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">Session Management Response Identified</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/admin/login/?next=/admin/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The given response has been identified as containing a session management token. The &#39;Other Info&#39; field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to &quot;Auto-Detect&quot; then this rule will change the session management to use the tokens identified.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>cookie:csrftoken</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (344 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/admin/ HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://127.0.0.1:8000/accounts/password_reset/
+Cookie: csrftoken=rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (448 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 302 Found
+Date: Thu, 08 May 2025 05:13:19 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+Location: /admin/login/?next=/admin/
+Expires: Thu, 08 May 2025 05:13:19 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+X-Frame-Options: DENY
+Content-Length: 0
+Vary: Cookie
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>csrftoken</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-7">User Agent Fuzzer</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/content/tasks/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (182 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/content/tasks/ HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (545 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 08 May 2025 05:13:32 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+Expires: Thu, 08 May 2025 05:13:32 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+Vary: Cookie
+X-Frame-Options: DENY
+Content-Length: 5808
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Set-Cookie: csrftoken=JikwyPk0QVfPOhRxncgeAJYnJlZD2z5n; expires=Thu, 07 May 2026 05:13:32 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (5808 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;West Point Master Tracker&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot;&gt;
+    &lt;!-- Add any additional styles or libraries here --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;d-flex flex-column min-vh-100&quot;&gt;
+        &lt;nav class=&quot;navbar navbar-expand-lg custom-navbar&quot;&gt;
+            &lt;!-- Your navigation bar content here --&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;navbar-brand text-white&quot; href=&quot;/content/tasks/&quot;&gt;West Point Master Tracker&lt;/a&gt;
+                &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                
+                &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+                    &lt;ul class=&quot;navbar-nav&quot;&gt;
+                        &lt;!-- Add more navigation links here as needed --&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/content/tasks/&quot;&gt;Dashboard&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                        
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/register/&quot;&gt;Register&lt;/a&gt;
+                        &lt;/li&gt;
+
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/login/&quot;&gt;Login&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;div class=&quot;container mt-4 flex-grow-1&quot;&gt;
+            
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row justify-content-center&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;card shadow&quot;&gt;
+                
+                    &lt;div class=&quot;card-body justify-content-center&quot;&gt;
+                        &lt;h2 class=&quot;card-title text-center mb-4&quot;&gt;Account Login&lt;/h2&gt;
+                            &lt;form method=&quot;post&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; name=&quot;csrfmiddlewaretoken&quot; value=&quot;Z88ZquExt5FHLiPPJ5pzoRpFk6DBzPS0ygilO9On9QKmppwcW7vDOqdSThs4reNd&quot;&gt;
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Username
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;text&quot; name=&quot;username&quot; autofocus autocapitalize=&quot;none&quot; autocomplete=&quot;username&quot; maxlength=&quot;150&quot; required id=&quot;id_username&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Password
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;current-password&quot; required id=&quot;id_password&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+                                
+
+                                &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block&quot;&gt;Sign In&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;div class=&quot;mt-3 text-center&quot;&gt;
+                            &lt;p&gt;Do not have an account? &lt;a href=&quot;/accounts/register/&quot;&gt;Register here&lt;/a&gt;&lt;/p&gt;
+                            &lt;p&gt;Forgot your password? &lt;a href=&quot;/accounts/password_reset/&quot;&gt;Reset Password&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    /* Custom CSS for field alignment */   
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Optional: Increase spacing between form groups for visual separation */
+    .mt-3 {
+        margin-top: 20px;
+    }
+&lt;/style&gt;
+
+
+        &lt;/div&gt;
+
+        &lt;footer class=&quot;bg-dark text-white text-center py-3&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;p&gt;&amp;copy; 2025 West Point Master Tracker &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bootstrap and other scripts here --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+        /* Define your custom CSS here */
+        .custom-navbar {
+            background-color: #00205B; /* West Point Navy Blue */
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .custom-nav-link {
+            font-weight: bold;
+            font-style: italic;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3px 6px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Header User-Agent</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</code></pre></td>
+	</tr>
+	
+	
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8000</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-8">User Controllable HTML Element Attribute (Potential XSS)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8000/accounts/login/?next=/content/tasks/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p>
+
+<p>http://127.0.0.1:8000/accounts/login/?next=/content/tasks/</p>
+
+<p>appears to include user input in:</p>
+
+<p>a(n) [a] tag [href] attribute</p>
+
+<p>The user input found was:</p>
+
+<p>next=/content/tasks/</p>
+
+<p>The user-controlled value was:</p>
+
+<p>/content/tasks/</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (312 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8000/accounts/login/?next=/content/tasks/ HTTP/1.1
+host: 127.0.0.1:8000
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+referer: http://127.0.0.1:8000/content/tasks/
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (545 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 08 May 2025 05:13:18 GMT
+Server: WSGIServer/0.2 CPython/3.13.3
+Content-Type: text/html; charset=utf-8
+Expires: Thu, 08 May 2025 05:13:18 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+Vary: Cookie
+X-Frame-Options: DENY
+Content-Length: 5808
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Set-Cookie: csrftoken=rbJlrC8JPvNBFBlob7WYyPRMD05O2zXi; expires=Thu, 07 May 2026 05:13:18 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (5808 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;West Point Master Tracker&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot;&gt;
+    &lt;!-- Add any additional styles or libraries here --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;d-flex flex-column min-vh-100&quot;&gt;
+        &lt;nav class=&quot;navbar navbar-expand-lg custom-navbar&quot;&gt;
+            &lt;!-- Your navigation bar content here --&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;navbar-brand text-white&quot; href=&quot;/content/tasks/&quot;&gt;West Point Master Tracker&lt;/a&gt;
+                &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                
+                &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+                    &lt;ul class=&quot;navbar-nav&quot;&gt;
+                        &lt;!-- Add more navigation links here as needed --&gt;
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/content/tasks/&quot;&gt;Dashboard&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                        
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/register/&quot;&gt;Register&lt;/a&gt;
+                        &lt;/li&gt;
+
+                        &lt;li class=&quot;nav-item&quot;&gt;
+                            &lt;a class=&quot;nav-link text-white&quot; href=&quot;/accounts/login/&quot;&gt;Login&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;div class=&quot;container mt-4 flex-grow-1&quot;&gt;
+            
+&lt;div class=&quot;container mt-5&quot;&gt;
+    &lt;div class=&quot;row justify-content-center&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;card shadow&quot;&gt;
+                
+                    &lt;div class=&quot;card-body justify-content-center&quot;&gt;
+                        &lt;h2 class=&quot;card-title text-center mb-4&quot;&gt;Account Login&lt;/h2&gt;
+                            &lt;form method=&quot;post&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; name=&quot;csrfmiddlewaretoken&quot; value=&quot;tjx5EjaJBUxdATwdc0057bBBGHZ5jai2Kk6gVL8igfaE5kHrdXMTvQid9xUJbz5a&quot;&gt;
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Username
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;text&quot; name=&quot;username&quot; autofocus autocapitalize=&quot;none&quot; autocomplete=&quot;username&quot; maxlength=&quot;150&quot; required id=&quot;id_username&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+
+                                    &lt;div class=&quot;form-group text-center&quot;&gt;
+                                        Password
+                                        &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                            &lt;input type=&quot;password&quot; name=&quot;password&quot; autocomplete=&quot;current-password&quot; required id=&quot;id_password&quot;&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;span class=&quot;text-danger&quot;&gt;&lt;/span&gt;
+
+                                
+                                
+
+                                &lt;div class=&quot;input-group justify-content-center&quot;&gt;
+                                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block&quot;&gt;Sign In&lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;div class=&quot;mt-3 text-center&quot;&gt;
+                            &lt;p&gt;Do not have an account? &lt;a href=&quot;/accounts/register/&quot;&gt;Register here&lt;/a&gt;&lt;/p&gt;
+                            &lt;p&gt;Forgot your password? &lt;a href=&quot;/accounts/password_reset/&quot;&gt;Reset Password&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    /* Custom CSS for field alignment */   
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Optional: Increase spacing between form groups for visual separation */
+    .mt-3 {
+        margin-top: 20px;
+    }
+&lt;/style&gt;
+
+
+        &lt;/div&gt;
+
+        &lt;footer class=&quot;bg-dark text-white text-center py-3&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;p&gt;&amp;copy; 2025 West Point Master Tracker &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bootstrap and other scripts here --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+        /* Define your custom CSS here */
+        .custom-navbar {
+            background-color: #00205B; /* West Point Navy Blue */
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .custom-nav-link {
+            font-weight: bold;
+            font-style: italic;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3px 6px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>next</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="https://w3c.github.io/webappsec-csp/">https://w3c.github.io/webappsec-csp/</a></li>
+										<li><a
+											href="https://web.dev/articles/csp">https://web.dev/articles/csp</a></li>
+										<li><a
+											href="https://caniuse.com/#feat=contentsecuritypolicy">https://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Cookie No HttpOnly Flag</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10010/">Cookie No HttpOnly Flag</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1004.html">1004</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/www-community/HttpOnly">https://owasp.org/www-community/HttpOnly</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Cross-Domain JavaScript Source File Inclusion</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10017/">Cross-Domain JavaScript Source File Inclusion</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/829.html">829</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10036/">HTTP Server Response Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/497.html">497</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://httpd.apache.org/docs/current/mod/core.html#servertokens">https://httpd.apache.org/docs/current/mod/core.html#servertokens</a></li>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)">https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)</a></li>
+										<li><a
+											href="https://www.troyhunt.com/shhh-dont-let-your-response-headers/">https://www.troyhunt.com/shhh-dont-let-your-response-headers/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Authentication Request Identified</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10111/">Authentication Request Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>Session Management Response Identified</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10112/">Session Management Response Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>User Agent Fuzzer</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/wstg">https://owasp.org/wstg</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>User Controllable HTML Element Attribute (Potential XSS)</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10031/">User Controllable HTML Element Attribute (Potential XSS)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+

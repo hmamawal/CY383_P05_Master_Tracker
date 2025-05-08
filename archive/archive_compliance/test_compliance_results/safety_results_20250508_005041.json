@@ -1,0 +1,1 @@
+[{"name": "django", "installed": "3.2.0", "vulnerabilities": [{"severity": "high", "advisory": "Mock vulnerability in Django"}]}]
