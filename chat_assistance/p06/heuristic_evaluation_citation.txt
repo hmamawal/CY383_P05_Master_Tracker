@@ -1,9 +1,21 @@
 heuristic section work flow:
 1. got condensed and clarified information based on lesson 24 from this chat: https://chatgpt.com/share/681c3362-9a30-8003-8ac9-d4095909a00b
-2. gave this information to github copilot for context (see markdown document)
+2. gave this information to github copilot for context (see markdown document): https://github.com/hmamawal/CY383_P05_Master_Tracker/blob/main/chat_assistance/p06/heuristic_evaluation.md
 3. took output from copilot and gave it to this chat to improve: https://chatgpt.com/share/681c33e6-c884-8003-ba41-fe9cb6d4ce27
 4. wrote justifications based on information given from markdown document chat. 
 
 security section work flow: 
 1. clarify whether lesson 26 or 25 is more pertinent: https://chatgpt.com/share/681c344d-bd64-8003-95e3-422a0acf6383
-2. 
+2. lesson 25 text given to github copilot. video watched on how to use zap: https://youtu.be/wLfRz7rRsH4?si=8QP4UxTlFJ7ImH-j. bandit and zap run and results obtained. 
+3. zap and bandit results given to copilot to analyze and write the latex sections 
+for the paper. These sections slightly tweaked.
+4. zap result photos given to chatgpt to transcribe into markdown then markdown given to 
+copilot to incorperate intot he security report: https://chatgpt.com/share/681c583b-c1cc-8003-9da5-ea0d33de207d
+5. copilot asked to analyze the code + results and write about the effectiveness of the counter measures. what it wrote was used largely without 
+modification.
+
+presentation creation:
+1. latex paper + beamer for overleaf instructions given to github copilot to create the presenation slides
+
+citations
+1. this text file - https://github.com/hmamawal/CY383_P05_Master_Tracker/blob/main/chat_assistance/p06/heuristic_evaluation_citation.txt - given to chatgpt to format into better looking citations
